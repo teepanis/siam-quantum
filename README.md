@@ -10,7 +10,7 @@ You could download the executables for MacOS, Linux, and Windows from the offici
 
 ## 2. Compiling SQ
 
-LAPACK is required to build SQ from source code. It should be easy to build LAPACK using a fortran compiler. Optionally, you may compile SQ with LIBXC library to use a long list of exchange-corrlation functional such as B3LYP, and PBE.
+LAPACK is required to build SQ from source code. It should be easy to build LAPACK using a fortran compiler. Optionally, you may compile SQ with LIBXC library to use a long list of exchange-correlation functional such as B3LYP, and PBE.
 
 ### 2.1 Compiling LAPACK
 
