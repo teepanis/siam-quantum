@@ -1,0 +1,427 @@
+# depslib dependency file v1.0
+1538429446 source:c:\users\asuspc\desktop\sqrepo\src\basis.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"int.h"
+	"util.h"
+	"basis.h"
+
+1450518292 c:\users\asuspc\desktop\sqrepo\src\int.h
+
+1457487038 c:\users\asuspc\desktop\sqrepo\src\util.h
+
+1450518180 c:\users\asuspc\desktop\sqrepo\src\basis.h
+	"mol.h"
+
+1462517722 c:\users\asuspc\desktop\sqrepo\src\mol.h
+
+1587459094 source:c:\users\asuspc\desktop\sqrepo\src\check.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"check.h"
+	"lin.h"
+	"util.h"
+	"int.h"
+
+1450518194 c:\users\asuspc\desktop\sqrepo\src\check.h
+	"basis.h"
+	"option.h"
+	"mol.h"
+
+1586580468 c:\users\asuspc\desktop\sqrepo\src\option.h
+
+1450518306 c:\users\asuspc\desktop\sqrepo\src\lin.h
+
+1450518200 source:c:\users\asuspc\desktop\sqrepo\src\conv.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"conv.h"
+	"lin.h"
+
+1450518208 c:\users\asuspc\desktop\sqrepo\src\conv.h
+
+1450518214 source:c:\users\asuspc\desktop\sqrepo\src\fgamma.c
+	<math.h>
+	"fgamma.h"
+
+1450518220 c:\users\asuspc\desktop\sqrepo\src\fgamma.h
+
+1585979890 source:c:\users\asuspc\desktop\sqrepo\src\grad.c
+	<math.h>
+	<stdlib.h>
+	<stdio.h>
+	"basis.h"
+	"matrix.h"
+	"lin.h"
+	"int.h"
+	"util.h"
+	"option.h"
+	"uhf.h"
+	"grad.h"
+	"rpc.h"
+	"dft.h"
+	"grid.h"
+
+1538431483 c:\users\asuspc\desktop\sqrepo\src\matrix.h
+	"basis.h"
+	"mol.h"
+	"int.h"
+	"option.h"
+
+1575432394 c:\users\asuspc\desktop\sqrepo\src\uhf.h
+	<math.h>
+	"mol.h"
+	"basis.h"
+	"option.h"
+
+1462921176 c:\users\asuspc\desktop\sqrepo\src\grad.h
+
+1462921168 c:\users\asuspc\desktop\sqrepo\src\rpc.h
+	"basis.h"
+	"option.h"
+
+1538431025 source:c:\users\asuspc\desktop\sqrepo\src\int.c
+	<math.h>
+	<stdlib.h>
+	<string.h>
+	"int.h"
+	"fgamma.h"
+
+1538036648 source:c:\users\asuspc\desktop\sqrepo\src\lin.c
+	<math.h>
+	<stdlib.h>
+	<stdio.h>
+	"lin.h"
+
+1571238639 source:c:\users\asuspc\desktop\sqrepo\src\matrix.c
+	<math.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"int.h"
+	"basis.h"
+	"mol.h"
+	"multipole.h"
+	"matrix.h"
+
+1450518386 c:\users\asuspc\desktop\sqrepo\src\multipole.h
+	"basis.h"
+
+1462670280 c:\users\asuspc\desktop\sqrepo\src\quartet.h
+
+1585464866 source:c:\users\asuspc\desktop\sqrepo\src\mecp.c
+	<stdlib.h>
+	<stdio.h>
+	<unistd.h>
+	<math.h>
+	<string.h>
+	"mecp.h"
+	"lin.h"
+	"grad.h"
+	"uhf.h"
+	"mol.h"
+	"util.h"
+	"optimize.h"
+
+1585464795 c:\users\asuspc\desktop\sqrepo\src\mecp.h
+	"basis.h"
+	"mol.h"
+	"option.h"
+
+1462517746 source:c:\users\asuspc\desktop\sqrepo\src\mol.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"mol.h"
+	"util.h"
+
+1525730102 source:c:\users\asuspc\desktop\sqrepo\src\mp2.c
+	<math.h>
+	<stdio.h>
+	<string.h>
+	"mp2.h"
+	"int.h"
+	"matrix.h"
+	"lin.h"
+	"rpc.h"
+	"util.h"
+
+1488249376 c:\users\asuspc\desktop\sqrepo\src\mp2.h
+	<stdlib.h>
+	<stdio.h>
+	"basis.h"
+	"option.h"
+	"mol.h"
+
+1450518378 source:c:\users\asuspc\desktop\sqrepo\src\multipole.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"multipole.h"
+	"basis.h"
+	"matrix.h"
+
+1585464925 source:c:\users\asuspc\desktop\sqrepo\src\optimize.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"uhf.h"
+	"grad.h"
+	"optimize.h"
+	"util.h"
+
+1585464775 c:\users\asuspc\desktop\sqrepo\src\optimize.h
+	"basis.h"
+	"mol.h"
+	"option.h"
+
+1586580484 source:c:\users\asuspc\desktop\sqrepo\src\option.c
+	<stdio.h>
+	<unistd.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"option.h"
+	"util.h"
+	"grid.h"
+	"dft.h"
+	<xc.h>
+
+1462496292 source:c:\users\asuspc\desktop\sqrepo\src\pop.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"int.h"
+	"basis.h"
+	"matrix.h"
+	"mol.h"
+	"option.h"
+	"util.h"
+	"uhf.h"
+	"pop.h"
+
+1450518434 c:\users\asuspc\desktop\sqrepo\src\pop.h
+
+1462670857 source:c:\users\asuspc\desktop\sqrepo\src\quartet.c
+	<string.h>
+	<math.h>
+	"fgamma.h"
+	"int.h"
+	"quartet.h"
+
+1450518494 source:c:\users\asuspc\desktop\sqrepo\src\rhf.c
+	<math.h>
+	<stdlib.h>
+	<stdio.h>
+	"basis.h"
+	"matrix.h"
+	"lin.h"
+	"int.h"
+	"util.h"
+	"option.h"
+	"rhf.h"
+
+1450518500 c:\users\asuspc\desktop\sqrepo\src\rhf.h
+	<math.h>
+	"mol.h"
+	"basis.h"
+	"option.h"
+
+1471200502 source:c:\users\asuspc\desktop\sqrepo\src\rpc.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/file.h>
+	<windows.h>
+	"matrix.h"
+	"rpc.h"
+	"mp2.h"
+	"grad.h"
+
+1585484088 source:c:\users\asuspc\desktop\sqrepo\src\sq.c
+	<stdlib.h>
+	<stdio.h>
+	"util.h"
+	"mol.h"
+	"basis.h"
+	"rhf.h"
+	"uhf.h"
+	"option.h"
+	"xsf.h"
+	"grad.h"
+	"hessian.h"
+	"pop.h"
+	"optimize.h"
+	"check.h"
+	"mp2.h"
+	"rpc.h"
+	"mecp.h"
+	"qmd.h"
+
+1450518560 c:\users\asuspc\desktop\sqrepo\src\xsf.h
+
+1586867561 source:c:\users\asuspc\desktop\sqrepo\src\uhf.c
+	<math.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"basis.h"
+	"matrix.h"
+	"lin.h"
+	"int.h"
+	"fgamma.h"
+	"util.h"
+	"option.h"
+	"rhf.h"
+	"uhf.h"
+	"conv.h"
+	"check.h"
+	"rpc.h"
+	"grid.h"
+	"dft.h"
+
+1457487012 source:c:\users\asuspc\desktop\sqrepo\src\util.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+	<string.h>
+	<ctype.h>
+
+1510967214 source:c:\users\asuspc\desktop\sqrepo\src\xsf.c
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	"uhf.h"
+	"mol.h"
+	"basis.h"
+	"util.h"
+	"option.h"
+	"matrix.h"
+
+1457535331 source:c:\users\asuspc\desktop\sqrepo\src\excite.c
+	<math.h>
+	<stdlib.h>
+	<stdio.h>
+	"basis.h"
+	"matrix.h"
+	"mol.h"
+	"option.h"
+	"util.h"
+	"lin.h"
+	"quartet.h"
+	"rpc.h"
+	"excite.h"
+
+1457233860 c:\users\asuspc\desktop\sqrepo\src\excite.h
+
+1457386066 source:c:\users\asuspc\desktop\sqrepo\src\gshell.c
+	<math.h>
+	"int.h"
+	"gshell.h"
+
+1457385992 c:\users\asuspc\desktop\sqrepo\src\gshell.h
+
+1499782706 source:c:\users\asuspc\desktop\sqrepo\src\qmd.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"uhf.h"
+	"grad.h"
+	"util.h"
+	"mol.h"
+	"pop.h"
+	"qmd.h"
+
+1584894889 c:\users\asuspc\desktop\sqrepo\src\qmd.h
+	"basis.h"
+	"mol.h"
+	"option.h"
+
+1571366564 source:c:\users\asuspc\desktop\sqrepo\src\grid.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"option.h"
+	"basis.h"
+	"grid.h"
+
+1571367185 c:\users\asuspc\desktop\sqrepo\src\grid.h
+	"util.h"
+	"basis.h"
+
+1458482756 source:c:\users\asuspc\desktop\sqrepo\src\ratom.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"util.h"
+	"int.h"
+	"uhf.h"
+	"lin.h"
+	"grid.h"
+	"ratom.h"
+
+1458430193 c:\users\asuspc\desktop\sqrepo\src\ratom.h
+	"mol.h"
+	"basis.h"
+	"option.h"
+
+1586513163 source:c:\users\asuspc\desktop\sqrepo\src\dft.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"option.h"
+	"dft.h"
+	"uhf.h"
+	<xc.h>
+
+1581528348 c:\users\asuspc\desktop\sqrepo\src\dft.h
+	"basis.h"
+	"grid.h"
+
+1570534431 c:\users\asuspc\desktop\lapack_windows\libxc-4.3.4-mingw-6.3.0-32bit\include\xc.h
+	"xc_version.h"
+	"xc_funcs.h"
+	"xc_funcs_removed.h"
+
+1570528325 c:\users\asuspc\desktop\lapack_windows\libxc-4.3.4-mingw-6.3.0-32bit\include\xc_version.h
+
+1570534432 c:\users\asuspc\desktop\lapack_windows\libxc-4.3.4-mingw-6.3.0-32bit\include\xc_funcs.h
+
+1569752074 c:\users\asuspc\desktop\lapack_windows\libxc-4.3.4-mingw-6.3.0-32bit\include\xc_funcs_removed.h
+
+1571455335 c:\users\asuspc\desktop\sqrepo\src\libs_win32\xc.h
+	"xc_version.h"
+	"xc_funcs.h"
+	"xc_funcs_removed.h"
+
+1571065778 c:\users\asuspc\desktop\sqrepo\src\libs_win32\xc_version.h
+
+1571455336 c:\users\asuspc\desktop\sqrepo\src\libs_win32\xc_funcs.h
+
+1569752074 c:\users\asuspc\desktop\sqrepo\src\libs_win32\xc_funcs_removed.h
+
+1586592826 source:c:\users\asuspc\desktop\sqrepo\src\hessian.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"uhf.h"
+	"grad.h"
+	"hessian.h"
+	"util.h"
+	"lin.h"
+	"qmd.h"
+
+1585406865 c:\users\asuspc\desktop\sqrepo\src\hessian.h
+	"basis.h"
+	"mol.h"
+	"option.h"
+

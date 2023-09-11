@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SQ" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SQ" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/SQ" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-O3 -Wall -floop-nest-optimize" />
+			<Add option="-DLIBXC" />
+			<Add directory="libs_win32" />
+		</Compiler>
+		<Linker>
+			<Add option="-static" />
+			<Add library="liblapack.a" />
+			<Add library="librefblas.a" />
+			<Add library="gfortran" />
+			<Add library="quadmath" />
+			<Add library="xc" />
+			<Add directory="./" />
+			<Add directory="libs_win32" />
+		</Linker>
+		<Unit filename="Makefile" />
+		<Unit filename="basis.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="basis.h" />
+		<Unit filename="check.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="check.h" />
+		<Unit filename="conv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="conv.h" />
+		<Unit filename="dft.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dft.h" />
+		<Unit filename="fgamma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fgamma.h" />
+		<Unit filename="grad.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="grad.h" />
+		<Unit filename="grid.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="grid.h" />
+		<Unit filename="hessian.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="hessian.h" />
+		<Unit filename="int.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="int.h" />
+		<Unit filename="lin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lin.h" />
+		<Unit filename="matrix.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="matrix.h" />
+		<Unit filename="mecp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mecp.h" />
+		<Unit filename="mol.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mol.h" />
+		<Unit filename="mp2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mp2.h" />
+		<Unit filename="multipole.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="multipole.h" />
+		<Unit filename="optimize.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="optimize.h" />
+		<Unit filename="option.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="option.h" />
+		<Unit filename="pop.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="pop.h" />
+		<Unit filename="qmd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="qmd.h" />
+		<Unit filename="rhf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rhf.h" />
+		<Unit filename="rpc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="rpc.h" />
+		<Unit filename="sq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="uhf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="uhf.h" />
+		<Unit filename="util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="util.h" />
+		<Unit filename="xsf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="xsf.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

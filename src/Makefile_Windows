@@ -1,0 +1,44 @@
+SRC = sq.c fgamma.c int.c util.c basis.c mol.c lin.c matrix.c rhf.c uhf.c option.c xsf.c conv.c grad.c optimize.c pop.c check.c mp2.c multipole.c rpc.c mecp.c qmd.c grid.c dft.c
+OBJ = sq.o fgamma.o int.o util.o basis.o mol.o lin.o matrix.o rhf.o uhf.o option.o xsf.o conv.o grad.o optimize.o pop.o check.o mp2.o multipole.o rpc.o mecp.o qmd.o grid.o dft.o
+
+LIB = -llapack -lrefblas -lxc
+
+#CC  = icc
+#CCOPT = -O3 -funroll-loops -fno-alias -m64 -Wall
+#LDOPT = -O3 -m64 -Wall
+
+CC    = gcc -Ilibs_win32
+CCOPT = -O3 -Wall -floop-nest-optimize -DLIBXC
+LDOPT = -Llibs_win32
+
+all: sq
+
+%.o: %.c
+	${CC} ${CCOPT} -c $<
+
+sq: ${OBJ}
+	${CC} ${LDOPT} -o sq $^ -static -lm  ${LIB} -lgfortran -lquadmath  -lxc
+#	gfortran -o sq $^ -lm -static ${LIB}
+
+clean:
+	del sq.exe
+	del *.o
+
+#libsq.so: ${SRC}
+#	${CC} -Wall -shared -O3 -o libsq.so ${SRC}
+
+#all: libsq.a sq
+
+#libsq.a:${SRC}
+#	${CC} ${CCOPT} -c *.c
+#	ar cr libsq.a ${OBJ}
+#	rm -f *.o	
+
+#sq: sq.c libsq.a
+#	${CC} ${CCOPT} -c sq.c
+#	${CC} ${LDOPT} -o sq sq.o libsq.a -lm -lgfortran ${LIB} 
+#	rm -f sq.o
+
+#clean:
+#	rm -f sq
+#	rm -f libsq.a
