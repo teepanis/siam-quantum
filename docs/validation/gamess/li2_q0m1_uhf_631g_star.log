@@ -1,0 +1,1779 @@
+1 : li2_q0m1_uhf_631g_star.inp
+----- GAMESS execution script 'rungms' -----
+This job is running on host Macbooks-MacBook-Pro.local
+under operating system Darwin at Mon Oct 20 19:56:01 +07 2025
+Available scratch disk space (Kbyte units) at beginning of the job is
+Filesystem   1024-blocks      Used Available Capacity iused      ifree %iused  Mounted on
+/dev/disk3s5   482797652 122166680 339926532    27% 1896215 3399265320    0%   /System/Volumes/Data
+GAMESS temporary binary files will be written to /Users/macbookpro/local/gamess/scr
+GAMESS supplementary output files will be written to /Users/macbookpro/local/gamess/scr
+Copying input file /Users/macbookpro/sq2_data/li2_q0m1_uhf_631g_star.inp to your run's scratch directory...
+          *******************************************************
+          *                                                     *
+          *          GAMESS VERSION = 30 JUN 2023 (R1)          *
+          *                                                     *
+          *              doi.org/10.1063/5.0005188              *
+          *                                                     *
+          **************** 64 BIT LINUX VERSION *****************
+
+  GAMESS HAS BEEN MADE POSSIBLE WITH IMPORTANT CONTRIBUTIONS FROM
+  THE FOLLOWING INDIVIDUALS (IN ALPHABETICAL ORDER):
+
+     IVANA ADAMOVIC, CHRISTINE AIKENS, TOMOKO AKAMA,
+     MELISA ALKAN, YURI ALEXEEV, YURIKO AOKI, POOJA ARORA,
+     TOSHIO ASADA, ANDREY ASADCHEV, KIM K. BALDRIDGE,
+     PRADIPTA BANDYOPADHYAY, TAYLOR A. BARNES, MARIA BARYSZ,
+     ROB BELL, JONATHAN BENTZ, COLLEEN BERTONI,
+     JERRY A. BOATZ, BRETT BODE, KURT BRORSEN, KURT R. BRORSEN,
+     LAIMUTIS BYTAUTAS, CALEB CARLIN, LAURA CARRINGTON,
+     GALINA CHABAN, BENOIT CHAMPAGNE, WEI CHEN, MAHITO CHIBA,
+     DAN CHIPMAN, CHEOL HO CHOI, TANNER CULPITT,
+     DIPAYAN DATTA, PAUL DAY, ALBERT DEFUSCO,
+     NUWAN DESILVA, J. EMILIANO DEUSTUA,
+     TIM DUDLEY, MICHEL DUPUIS, STEVEN T. ELBERT,
+     DMITRI FEDOROV, KATHERINE FERRERAS, MICHAEL FILATOV,
+     ALEX FINDLATER,GRAHAM FLETCHER, MARK FREITAG,
+     CHRISTIAN FRIEDL, DAVID GARMER, 
+     IGOR S. GERASIMOV, KURT GLAESEMANN,
+     MARK S. GORDON, JEFFREY R. GOUR, FENG LONG GU,
+     EMILIE B. GUIDEZ, ANASTASIA GUNINA, SHARON HAMMES-SCHIFFER,
+     MASATAKE HARUTA, KIMIHIKO HIRAO, YASUHIRO IKABATA,
+     TZVETELIN IORDANOV, STEPHAN IRLE, KAZUYA ISHIMURA,
+     JOE IVANIC, FRANK JENSEN, JAN H. JENSEN, VISVALDAS KAIRYS,
+     MUNEAKI KAMIYA, MICHIO KATOUDA, NAOAKI KAWAKAMI, DAN KEMP,
+     BERNARD KIRTMAN, KAZUO KITAURA, MARIUSZ KLOBUKOWSKI,
+     MASATO KOBAYASHI, KONSTANTIN KOMAROV, PRAKASHAN KORAMBATH,
+     JACEK KORCHOWIEC, SHIRO KOSEKI, KAROL KOWALSKI,
+     JIMMY KROMANN, STANISLAW A. KUCHARSKI, HENRY KURTZ,
+     SAROM SOK LEANG, SEUNGHOON LEE, HUI LI, SHUHUA LI, WEI LI,
+     JESSE J. LUTZ, ALEKSANDR O. LYKHIN,
+     ILIAS MAGOULAS, MARCIN MAKOWSKI,
+     JOANI MATO, NIKITA MATSUNAGA, BENEDETTA MENNUCCI,
+     GRANT MERRILL, NORIYUKI MINEZAWA, VLADIMIR MIRONOV,
+     EISAKU MIYOSHI, JOHN A. MONTGOMERY JR., HIROTOSHI MORI,
+     JONATHAN MULLIN, MONIKA MUSIAL, SHIGERU NAGASE,
+     TAKESHI NAGATA, HIROMI NAKAI, TAKAHITO NAKAJIMA,
+     YUYA NAKAJIMA, HARUYUKI NAKANO, HIROYA NAKATA, SEAN NEDD,
+     HEATHER NETZLOFF, KIET A. NGUYEN, YOSHIO NISHIMOTO,
+     BOSILJKA NJEGIC, RYAN OLSON, MIKE PAK, ROBERTO PEVERATI,
+     BUU PHAM, PIOTR PIECUCH, ANNA POMOGAEVA, DAVID POOLE,
+     SPENCER PRUITT, OLIVIER QUINET, LUKE ROSKOP,
+     KLAUS RUEDENBERG, ANDREW SAND, TOSAPORN SATTASATHUCHANA,
+     NOZOMI SAWADA, MICHAEL W. SCHMIDT, PATRICK E. SCHNEIDER,
+     JUNJI SEINO, PRACHI SHARMA, JUN SHEN, JIM SHOEMAKER,
+     YINAN SHU, DEJUN SI, JONATHAN SKONE, LYUDMILA SLIPCHENKO,
+     TONY SMITH, JIE SONG, MARK SPACKMAN, CASPER STEINMANN,
+     WALT STEVENS, PEIFENG SU, SHUJUN SU, CHET SWALINA,
+     CHINAMI TAKASHIMA, TETSUYA TAKETSUGU, ZHEN TAO,
+     NANDUN THELLAMUREGE, SEIKEN TOKURA, JACOPO TOMASI,
+     TSUGUKI TOUMA, TAKAO TSUNEDA, HIROAKI UMEDA,
+     JORGE LUIS GALVEZ VALLEJO, YALI WANG, SIMON WEBB,
+     AARON WEST, THERESA L. WINDUS, MARTA WLOCH,
+     PENG XU, KIYOSHI YAGI, SUSUMU YANAGISAWA, YANG YANG,
+     SOOHAENG YOO, TAKESHI YOSHIKAWA, FEDERICO ZAHARIEV,
+     TOBY ZENG
+
+  WHO ARE SUPPORTED BY THEIR INSTITUTION/UNIVERSITY/COMPANY/GROUP
+  (IN ALPHABETICAL ORDER):
+
+     EP ANALYTICS,
+     FACULTES UNIVERSITAIRES NOTRE-DAME DE LA PAIX,
+     INSTITUTE FOR MOLECULAR SCIENCE, IOWA STATE UNIVERSITY,
+     JACKSON STATE UNIVERSITY, JOHANNES KEPLER UNIVERSITY LINZ,
+     KYUNGPOOK NATIONAL UNIVERSITY
+     KYUSHU UNIVERSITY, MICHIGAN STATE UNIVERSITY,
+     MIE UNIVERSITY, THE MOLECULAR SCIENCES SOFTWARE INSTITUTE,
+     MOSCOW STATE UNIVERSITY,
+     N. COPERNICUS UNIVERSITY, NAGOYA UNIVERSITY,
+     NANJING UNIVERSITY, NAT. INST. OF ADVANCED INDUSTRIAL
+     SCIENCE AND TECHNOLOGY, NATIONAL INST. OF STANDARDS AND
+     TECHNOLOGY, NESMEYANOV INSTITUTE OF ORGANOELEMENT COMPOUNDS
+     OF RUSSIAN ACADEMY OF SCIENCES, OSAKA PREFECTURE UNIVERSITY,
+     PENNSYLVANIA STATE UNIVERSITY, TOKYO INSTITUTE OF TECHNOLOGY,
+     UNIVERSITY OF AARHUS, UNIVERSITY OF ALBERTA,
+     UNIVERSITY OF CALIFORNIA AT SANTA BARBARA,
+     UNIVERSITY OF COPENHAGEN, UNIVERSITY OF IOWA,
+     UNIVERSITY OF MEMPHIS, UNIVERSITY OF MINNESOTA,
+     UNIVERSITY OF NEBRASKA, UNIVERSITY OF NEW ENGLAND,
+     UNIVERSITY OF NOTRE DAME, UNIVERSITY OF PISA,
+     UNIVERSITY OF SILESIA, UNIVERSITY OF TOKYO,
+     UNIVERSITY OF ZURICH, WASEDA UNIVERSITY,
+     YALE UNIVERSITY
+
+  GAMESS SOFTWARE MANAGEMENT TEAM FOR THIS RELEASE:
+     MARK S. GORDON (TEAM LEAD),
+     BRETT BODE (SENIOR ADVISOR),
+     GIUSEPPE BARCA,
+     COLLEEN BERTONI,
+     KRISTOPHER KEIPERT (ADVISOR),
+     SAROM S. LEANG (DEVELOPMENT LEAD),
+     BUU PHAM,
+     JACKSON HAYES (WEBSITE ADMINISTRATOR),
+     PENG XU
+
+ EXECUTION OF GAMESS BEGUN 19:56:01 20-OCT-2025    
+
+            ECHO OF THE FIRST FEW INPUT CARDS -
+ INPUT CARD> $CONTRL SCFTYP=UHF ICHARG=0 MULT=1                                             
+ INPUT CARD> RUNTYP=OPTIMIZE                                                                
+ INPUT CARD> $END                                                                           
+ INPUT CARD> $BASIS GBASIS=N31 NGAUSS=6 NDFUNC=1 $END                                       
+ INPUT CARD> $DATA                                                                          
+ INPUT CARD> ... this is comment ...                                                        
+ INPUT CARD> C1                                                                             
+ INPUT CARD> LI    3   0.00000000   0.00000000   1.39056086                                 
+ INPUT CARD> LI    3   0.00000000   0.00000000  -1.39056086                                 
+ INPUT CARD> $END                                                                           
+ INPUT CARD>                                                                                
+      1000000 WORDS OF MEMORY AVAILABLE
+
+     BASIS OPTIONS
+     -------------
+     GBASIS=N31          IGAUSS=       6      POLAR=POPN31  
+     NDFUNC=       1     NFFUNC=       0     DIFFSP=       F
+     NPFUNC=       0      DIFFS=       F     BASNAM=        
+
+
+     RUN TITLE
+     ---------
+  ... this is comment ...                                                        
+
+ THE POINT GROUP OF THE MOLECULE IS C1      
+ THE ORDER OF THE PRINCIPAL AXIS IS     0
+
+ ATOM      ATOMIC                      COORDINATES (BOHR)
+           CHARGE         X                   Y                   Z
+ LI          3.0     0.0000000000        0.0000000000        2.6277789947
+ LI          3.0     0.0000000000        0.0000000000       -2.6277789947
+
+          INTERNUCLEAR DISTANCES (ANGS.)
+          ------------------------------
+
+                1 LI         2 LI    
+
+   1 LI      0.0000000    2.7811217 *
+   2 LI      2.7811217 *  0.0000000  
+
+  * ... LESS THAN  3.000
+
+
+     ATOMIC BASIS SET
+     ----------------
+ THE CONTRACTED PRIMITIVE FUNCTIONS HAVE BEEN UNNORMALIZED
+ THE CONTRACTED BASIS FUNCTIONS ARE NOW NORMALIZED TO UNITY
+
+  SHELL TYPE  PRIMITIVE        EXPONENT          CONTRACTION COEFFICIENT(S)
+
+ LI        
+
+      1   S       1           642.4189150    0.002142607810
+      1   S       2            96.7985153    0.016208871501
+      1   S       3            22.0911212    0.077315572504
+      1   S       4             6.2010702    0.245786052013
+      1   S       5             1.9351177    0.470189004025
+      1   S       6             0.6367358    0.345470845019
+
+      2   L       7             2.3249184   -0.035091745735    0.008941508043
+      2   L       8             0.6324304   -0.191232843103    0.141009464046
+      2   L       9             0.0790534    1.083987794916    0.945363695309
+
+      3   L      10             0.0359620    1.000000000000    1.000000000000
+
+      4   D      11             0.2000000    1.000000000000
+
+ LI        
+
+      5   S      12           642.4189150    0.002142607810
+      5   S      13            96.7985153    0.016208871501
+      5   S      14            22.0911212    0.077315572504
+      5   S      15             6.2010702    0.245786052013
+      5   S      16             1.9351177    0.470189004025
+      5   S      17             0.6367358    0.345470845019
+
+      6   L      18             2.3249184   -0.035091745735    0.008941508043
+      6   L      19             0.6324304   -0.191232843103    0.141009464046
+      6   L      20             0.0790534    1.083987794916    0.945363695309
+
+      7   L      21             0.0359620    1.000000000000    1.000000000000
+
+      8   D      22             0.2000000    1.000000000000
+
+ TOTAL NUMBER OF BASIS SET SHELLS             =    8
+ NUMBER OF CARTESIAN GAUSSIAN BASIS FUNCTIONS =   30
+ NUMBER OF ELECTRONS                          =    6
+ CHARGE OF MOLECULE                           =    0
+ SPIN MULTIPLICITY                            =    1
+ NUMBER OF OCCUPIED ORBITALS (ALPHA)          =    3
+ NUMBER OF OCCUPIED ORBITALS (BETA )          =    3
+ TOTAL NUMBER OF ATOMS                        =    2
+ THE NUCLEAR REPULSION ENERGY IS        1.7124727799
+
+ THIS MOLECULE IS RECOGNIZED AS BEING LINEAR,
+ ORBITAL LZ DEGENERACY TOLERANCE ETOLLZ= 1.00E-06
+
+     $CONTRL OPTIONS
+     ---------------
+ SCFTYP=UHF          RUNTYP=OPTIMIZE     EXETYP=RUN     
+ MPLEVL=       0     CITYP =NONE         CCTYP =NONE         VBTYP =NONE    
+ DFTTYP=NONE         TDDFT =NONE    
+ MULT  =       1     ICHARG=       0     NZVAR =       0     COORD =UNIQUE  
+ PP    =NONE         RELWFN=NONE         LOCAL =NONE         NUMGRD=       F
+ ISPHER=      -1     NOSYM =       0     MAXIT =      30     UNITS =ANGS    
+ PLTORB=       F     MOLPLT=       F     AIMPAC=       F     FRIEND=        
+ NPRINT=       7     IREST =       0     GEOM  =INPUT   
+ NORMF =       0     NORMP =       0     ITOL  =      20     ICUT  =       9
+ INTTYP=BEST         GRDTYP=BEST         QMTTOL= 1.0E-06
+
+     $SYSTEM OPTIONS
+     ---------------
+  REPLICATED MEMORY=     1000000 WORDS (ON EVERY NODE).
+ DISTRIBUTED MEMDDI=           0 MILLION WORDS IN AGGREGATE,
+ MEMDDI DISTRIBUTED OVER   1 PROCESSORS IS           0 WORDS/PROCESSOR.
+ TOTAL MEMORY REQUESTED ON EACH PROCESSOR=     1000000 WORDS.
+ TIMLIM=      525600.00 MINUTES, OR     365.0 DAYS.
+ PARALL= F  BALTYP=  DLB     KDIAG=    0  COREFL= F
+ MXSEQ2=     300 MXSEQ3=     150  mem10=         0  mem22=         0
+
+          ----------------
+          PROPERTIES INPUT
+          ----------------
+
+     MOMENTS            FIELD           POTENTIAL          DENSITY
+ IEMOM =       1   IEFLD =       0   IEPOT =       0   IEDEN =       0
+ WHERE =COMASS     WHERE =NUCLEI     WHERE =NUCLEI     WHERE =NUCLEI  
+ OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH    
+ IEMINT=       0   IEFINT=       0                     IEDINT=       0
+                                                       MORB  =       0
+          EXTRAPOLATION IN EFFECT
+          SOSCF IN EFFECT
+          DIIS or SOSCF will be reset if energy rises
+ ORBITAL PRINTING OPTION: NPREO=     1    30     2     1
+
+     -------------------------------
+     INTEGRAL TRANSFORMATION OPTIONS
+     -------------------------------
+     NWORD  =            0
+     CUTTRF = 1.0E-09     MPTRAN =       0
+     DIRTRF =       F     AOINTS =DUP     
+
+          ----------------------
+          INTEGRAL INPUT OPTIONS
+          ----------------------
+ NOPK  =       1 NORDER=       0 SCHWRZ=       F
+
+     ------------------------------------------
+     THE POINT GROUP IS C1 , NAXIS= 0, ORDER= 1
+     ------------------------------------------
+
+     DIMENSIONS OF THE SYMMETRY SUBSPACES ARE
+ A   =   30
+
+ ..... DONE SETTING UP THE RUN .....
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    97.38%
+
+
+          -----------------------------
+          STATIONARY POINT LOCATION RUN
+          -----------------------------
+
+ OBTAINING INITIAL HESSIAN, HESS=GUESS   
+ CARTESIAN COORDINATE OPTIMIZATION USING BADGER'S RULE FORCE CONSTANT GUESS
+
+          PARAMETERS CONTROLLING GEOMETRY SEARCH ARE
+          METHOD =QA                  UPHESS =BFGS    
+          NNEG   =         0          NFRZ   =         0
+          NSTEP  =        50          IFOLOW =         1
+          HESS   =GUESS               RESTAR =         F
+          IHREP  =         0          HSSEND =         F
+          NPRT   =         0          NPUN   =         0
+          OPTTOL = 1.000E-04          RMIN   = 1.500E-03
+          RMAX   = 1.000E-01          RLIM   = 7.000E-02
+          DXMAX  = 3.000E-01          PURIFY =         F
+          MOVIE  =         F          TRUPD  =         T
+          TRMAX  = 5.000E-01          TRMIN  = 5.000E-02
+          ITBMAT =         5          STPT   =         F
+          STSTEP = 1.000E-02          PROJCT=          T
+
+ BEGINNING GEOMETRY SEARCH POINT NSERCH=   0 ...
+
+ COORDINATES OF ALL ATOMS ARE (ANGS)
+   ATOM   CHARGE       X              Y              Z
+ ------------------------------------------------------------
+ LI          3.0   0.0000000000   0.0000000000   1.3905608600
+ LI          3.0   0.0000000000   0.0000000000  -1.3905608600
+
+          ********************
+          1 ELECTRON INTEGRALS
+          ********************
+ ...... END OF ONE-ELECTRON INTEGRALS ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    97.64%
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES      8202 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.  ALPHA SET(S).
+     3 ORBITALS ARE OCCUPIED (    2 CORE ORBITALS).
+     3=A        4=A        5=A        6=A        7=A        8=A        9=A   
+    10=A       11=A       12=A       13=A   
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BETA SET(S).
+     3 ORBITALS ARE OCCUPIED (    2 CORE ORBITALS).
+     3=A        4=A        5=A        6=A        7=A        8=A        9=A   
+    10=A       11=A       12=A       13=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    97.90%
+
+                    ----------------------
+                    AO INTEGRAL TECHNOLOGY
+                    ----------------------
+     S,P,L SHELL ROTATED AXIS INTEGRALS, REPROGRAMMED BY
+        KAZUYA ISHIMURA (IMS) AND JOSE SIERRA (SYNSTAR).
+     S,P,D,L SHELL ROTATED AXIS INTEGRALS PROGRAMMED BY
+        KAZUYA ISHIMURA (INSTITUTE FOR MOLECULAR SCIENCE).
+     S,P,D,F,G SHELL TO TOTAL QUARTET ANGULAR MOMENTUM SUM 5,
+        ERIC PROGRAM BY GRAHAM FLETCHER (ELORET AND NASA ADVANCED
+        SUPERCOMPUTING DIVISION, AMES RESEARCH CENTER).
+     S,P,D,F,G,L SHELL GENERAL RYS QUADRATURE PROGRAMMED BY
+        MICHEL DUPUIS (PACIFIC NORTHWEST NATIONAL LABORATORY).
+
+          --------------------
+          2 ELECTRON INTEGRALS
+          --------------------
+
+ THE -PK- OPTION IS OFF, THE INTEGRALS ARE NOT IN SUPERMATRIX FORM.
+ STORING   15000 INTEGRALS/RECORD ON DISK, USING 12 BYTES/INTEGRAL.
+ TWO ELECTRON INTEGRAL EVALUATION REQUIRES   90432 WORDS OF MEMORY.
+ II,JST,KST,LST =  1  1  1  1 NREC =         1 INTLOC =    1
+ II,JST,KST,LST =  2  1  1  1 NREC =         1 INTLOC =    2
+ II,JST,KST,LST =  3  1  1  1 NREC =         1 INTLOC =   34
+ II,JST,KST,LST =  4  1  1  1 NREC =         1 INTLOC =  214
+ II,JST,KST,LST =  5  1  1  1 NREC =         1 INTLOC = 1189
+ II,JST,KST,LST =  6  1  1  1 NREC =         1 INTLOC = 1866
+ II,JST,KST,LST =  7  1  1  1 NREC =         1 INTLOC = 5596
+ II,JST,KST,LST =  8  1  1  1 NREC =         1 INTLOC =12130
+ TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =               28696
+          2 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
+  ...... END OF TWO-ELECTRON INTEGRALS .....
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    99.01%
+
+          ---------------------------
+                  UHF SCF CALCULATION
+          ---------------------------
+
+     NUCLEAR ENERGY =         1.7124727799
+     MAXIT = 30     NPUNCH=  2     MULT=  1
+     EXTRAP=T  DAMP=F  SHIFT=F  RSTRCT=F  DIIS=F  SOSCF=T
+     DENSITY MATRIX CONV=  1.00E-05
+     SOSCF WILL OPTIMIZE      81 ALPHA AND      81 BETA ROTATION ANGLES.
+     SOGTOL= 2.500E-01
+     MEMORY REQUIRED FOR UHF/ROHF ITERS=     40614 WORDS.
+
+ ITER EX      TOTAL ENERGY        E CHANGE  DENSITY CHANGE    ORB. GRAD 
+   1  0      -14.8493627474   -14.8493627474   0.197473144   0.000000000
+          ---------------START SECOND ORDER SCF---------------
+   2  1      -14.8654659737    -0.0161032264   0.028363327   0.010158248
+   3  2      -14.8666713830    -0.0012054092   0.017751513   0.003968427
+   4  3      -14.8669040193    -0.0002326363   0.001138435   0.000423055
+   5  4      -14.8669061920    -0.0000021726   0.000600050   0.000084763
+   6  5      -14.8669064228    -0.0000002309   0.000126770   0.000023852
+   7  6      -14.8669064313    -0.0000000084   0.000020627   0.000007240
+   8  7      -14.8669064317    -0.0000000004   0.000001484   0.000000929
+   9  8      -14.8669064317    -0.0000000000   0.000000408   0.000000123
+
+          -----------------
+          DENSITY CONVERGED
+          -----------------
+     TIME TO FORM FOCK OPERATORS=       0.0 SECONDS (       0.0 SEC/ITER)
+     TIME TO SOLVE SCF EQUATIONS=       0.0 SECONDS (       0.0 SEC/ITER)
+
+ FINAL UHF ENERGY IS      -14.8669064317 AFTER   9 ITERATIONS
+
+          --------------------
+          SPIN SZ   =    0.000
+          S-SQUARED =   -0.000
+          --------------------
+
+ LZ VALUE ANALYSIS FOR THE MOS
+ ----------------------------------------
+ MO     1 (    1) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     2 (    2) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     3 (    3) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     4 (    4) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     5 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     6 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     7 (    6) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     8 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     9 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    10 (    8) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    11 (    9) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    12 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    13 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    14 (   11) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    15 (   12) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    16 (   13) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    17 (   13) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    18 (   14) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    19 (   15) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    20 (   15) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    21 (   16) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    22 (   16) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    23 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    24 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    25 (   18) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    26 (   19) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    27 (   19) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    28 (   20) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    29 (   21) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    30 (   22) HAS LZ(WEIGHT)= 0.00(100.0%) 
+
+  ----- ALPHA SET ----- 
+
+          ------------
+          EIGENVECTORS
+          ------------
+
+                      1          2          3          4          5
+                   -2.4445    -2.4443    -0.1763     0.0155     0.0458
+                     A          A          A          A          A   
+    1  LI 1  S    0.706134  -0.705998  -0.147959  -0.099518   0.000000
+    2  LI 1  S   -0.006503   0.011145   0.107771  -0.018601   0.000000
+    3  LI 1  X    0.000000  -0.000000   0.000000  -0.000000   0.013058
+    4  LI 1  Y    0.000000  -0.000000   0.000000  -0.000000   0.060834
+    5  LI 1  Z    0.002285  -0.005195  -0.106712   0.039914   0.000000
+    6  LI 1  S    0.000202  -0.004363   0.398158  -0.141169   0.000000
+    7  LI 1  X    0.000000  -0.000000   0.000000  -0.000000   0.107105
+    8  LI 1  Y    0.000000  -0.000000   0.000000  -0.000000   0.498966
+    9  LI 1  Z   -0.001985   0.003493   0.020650   0.742935   0.000000
+   10  LI 1 XX    0.005849  -0.006761   0.025249   0.030528   0.000000
+   11  LI 1 YY    0.005849  -0.006761   0.025249   0.030528   0.000000
+   12  LI 1 ZZ    0.006083  -0.005631   0.034038   0.031336   0.000000
+   13  LI 1 XY    0.000000  -0.000000   0.000000  -0.000000   0.000000
+   14  LI 1 XZ    0.000000  -0.000000   0.000000  -0.000000   0.000710
+   15  LI 1 YZ    0.000000  -0.000000   0.000000  -0.000000   0.003309
+   16  LI 2  S    0.706134   0.705998  -0.147959   0.099518   0.000000
+   17  LI 2  S   -0.006503  -0.011145   0.107771   0.018601   0.000000
+   18  LI 2  X    0.000000  -0.000000   0.000000  -0.000000   0.013058
+   19  LI 2  Y    0.000000  -0.000000   0.000000  -0.000000   0.060834
+   20  LI 2  Z   -0.002285  -0.005195   0.106712   0.039914   0.000000
+   21  LI 2  S    0.000202   0.004363   0.398158   0.141169   0.000000
+   22  LI 2  X    0.000000  -0.000000   0.000000  -0.000000   0.107105
+   23  LI 2  Y    0.000000  -0.000000   0.000000  -0.000000   0.498966
+   24  LI 2  Z    0.001985   0.003493  -0.020650   0.742935   0.000000
+   25  LI 2 XX    0.005849   0.006761   0.025249  -0.030528   0.000000
+   26  LI 2 YY    0.005849   0.006761   0.025249  -0.030528   0.000000
+   27  LI 2 ZZ    0.006083   0.005631   0.034038  -0.031336   0.000000
+   28  LI 2 XY    0.000000  -0.000000   0.000000  -0.000000   0.000000
+   29  LI 2 XZ    0.000000  -0.000000   0.000000  -0.000000  -0.000710
+   30  LI 2 YZ    0.000000  -0.000000   0.000000  -0.000000  -0.003309
+
+                      6          7          8          9         10
+                    0.0458     0.0616     0.0908     0.0908     0.1375
+                     A          A          A          A          A   
+    1  LI 1  S    0.000000   0.002825   0.000000  -0.000000  -0.147579
+    2  LI 1  S    0.000000  -0.256166   0.000000  -0.000000   0.037954
+    3  LI 1  X    0.060834   0.000000  -0.004332  -0.045159   0.000000
+    4  LI 1  Y   -0.013058   0.000000   0.045159  -0.004332   0.000000
+    5  LI 1  Z    0.000000   0.073306   0.000000  -0.000000   0.301215
+    6  LI 1  S    0.000000   0.535928   0.000000  -0.000000   4.326257
+    7  LI 1  X    0.498966   0.000000   0.111991   1.167480   0.000000
+    8  LI 1  Y   -0.107105   0.000000  -1.167480   0.111991   0.000000
+    9  LI 1  Z    0.000000   0.689011   0.000000  -0.000000  -2.819561
+   10  LI 1 XX    0.000000   0.030801   0.000000  -0.000000  -0.010029
+   11  LI 1 YY    0.000000   0.030801   0.000000  -0.000000  -0.010029
+   12  LI 1 ZZ    0.000000   0.030089   0.000000  -0.000000   0.012668
+   13  LI 1 XY    0.000000   0.000000   0.000000  -0.000000   0.000000
+   14  LI 1 XZ    0.003309   0.000000   0.000820   0.008543   0.000000
+   15  LI 1 YZ   -0.000710   0.000000  -0.008543   0.000820   0.000000
+   16  LI 2  S    0.000000   0.002825   0.000000  -0.000000   0.147579
+   17  LI 2  S    0.000000  -0.256166   0.000000  -0.000000  -0.037954
+   18  LI 2  X    0.060834   0.000000   0.004332   0.045159   0.000000
+   19  LI 2  Y   -0.013058   0.000000  -0.045159   0.004332   0.000000
+   20  LI 2  Z    0.000000  -0.073306   0.000000  -0.000000   0.301215
+   21  LI 2  S    0.000000   0.535928   0.000000  -0.000000  -4.326257
+   22  LI 2  X    0.498966   0.000000  -0.111991  -1.167480   0.000000
+   23  LI 2  Y   -0.107105   0.000000   1.167480  -0.111991   0.000000
+   24  LI 2  Z    0.000000  -0.689011   0.000000  -0.000000  -2.819561
+   25  LI 2 XX    0.000000   0.030801   0.000000  -0.000000   0.010029
+   26  LI 2 YY    0.000000   0.030801   0.000000  -0.000000   0.010029
+   27  LI 2 ZZ    0.000000   0.030089   0.000000  -0.000000  -0.012668
+   28  LI 2 XY    0.000000   0.000000   0.000000  -0.000000   0.000000
+   29  LI 2 XZ   -0.003309   0.000000   0.000820   0.008543   0.000000
+   30  LI 2 YZ    0.000710   0.000000  -0.008543   0.000820   0.000000
+
+                     11         12         13         14         15
+                    0.1936     0.2107     0.2107     0.2133     0.2599
+                     A          A          A          A          A   
+    1  LI 1  S    0.058017   0.000000   0.000000   0.051346  -0.110015
+    2  LI 1  S    1.327314   0.000000   0.000000   1.932642  -1.554943
+    3  LI 1  X   -0.000000  -0.173186   1.087702   0.000000  -0.000000
+    4  LI 1  Y   -0.000000   1.087702   0.173186   0.000000  -0.000000
+    5  LI 1  Z   -0.785907   0.000000   0.000000   0.702908  -1.038363
+    6  LI 1  S   -0.793095   0.000000   0.000000  -1.360269   4.393795
+    7  LI 1  X   -0.000000   0.134704  -0.846012   0.000000  -0.000000
+    8  LI 1  Y   -0.000000  -0.846012  -0.134704   0.000000  -0.000000
+    9  LI 1  Z    1.077750   0.000000   0.000000  -0.505128  -1.109631
+   10  LI 1 XX   -0.132836   0.000000   0.000000  -0.212789   0.135014
+   11  LI 1 YY   -0.132836   0.000000   0.000000  -0.212789   0.135014
+   12  LI 1 ZZ   -0.124688   0.000000   0.000000  -0.165947   0.060629
+   13  LI 1 XY   -0.000000   0.000000   0.000000   0.000000  -0.000000
+   14  LI 1 XZ   -0.000000   0.001220  -0.007659   0.000000  -0.000000
+   15  LI 1 YZ   -0.000000  -0.007659  -0.001220   0.000000  -0.000000
+   16  LI 2  S    0.058017   0.000000   0.000000   0.051346   0.110015
+   17  LI 2  S    1.327314   0.000000   0.000000   1.932642   1.554943
+   18  LI 2  X   -0.000000  -0.173186   1.087702   0.000000  -0.000000
+   19  LI 2  Y   -0.000000   1.087702   0.173186   0.000000  -0.000000
+   20  LI 2  Z    0.785907   0.000000   0.000000  -0.702908  -1.038363
+   21  LI 2  S   -0.793095   0.000000   0.000000  -1.360269  -4.393795
+   22  LI 2  X   -0.000000   0.134704  -0.846012   0.000000  -0.000000
+   23  LI 2  Y   -0.000000  -0.846012  -0.134704   0.000000  -0.000000
+   24  LI 2  Z   -1.077750   0.000000   0.000000   0.505128  -1.109631
+   25  LI 2 XX   -0.132836   0.000000   0.000000  -0.212789  -0.135014
+   26  LI 2 YY   -0.132836   0.000000   0.000000  -0.212789  -0.135014
+   27  LI 2 ZZ   -0.124688   0.000000   0.000000  -0.165947  -0.060629
+   28  LI 2 XY   -0.000000   0.000000   0.000000   0.000000  -0.000000
+   29  LI 2 XZ   -0.000000  -0.001220   0.007659   0.000000  -0.000000
+   30  LI 2 YZ   -0.000000   0.007659   0.001220   0.000000  -0.000000
+
+                     16         17         18         19         20
+                    0.2633     0.2633     0.4661     0.5312     0.5312
+                     A          A          A          A          A   
+    1  LI 1  S   -0.000000  -0.000000  -0.167382  -0.000000   0.000000
+    2  LI 1  S   -0.000000  -0.000000  -2.373477  -0.000000   0.000000
+    3  LI 1  X   -0.080135   1.315525  -0.000000   0.178366  -0.004473
+    4  LI 1  Y    1.315525   0.080135  -0.000000   0.004473   0.178366
+    5  LI 1  Z   -0.000000  -0.000000   0.986006  -0.000000   0.000000
+    6  LI 1  S   -0.000000  -0.000000   6.020621  -0.000000   0.000000
+    7  LI 1  X    0.080599  -1.323141  -0.000000  -0.083750   0.002100
+    8  LI 1  Y   -1.323141  -0.080599  -0.000000  -0.002100  -0.083750
+    9  LI 1  Z   -0.000000  -0.000000  -2.825153  -0.000000   0.000000
+   10  LI 1 XX   -0.000000  -0.000000  -0.099932  -0.000000   0.000000
+   11  LI 1 YY   -0.000000  -0.000000  -0.099932  -0.000000   0.000000
+   12  LI 1 ZZ   -0.000000  -0.000000   0.354588  -0.000000   0.000000
+   13  LI 1 XY   -0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   14  LI 1 XZ   -0.003136   0.051480  -0.000000   0.633085  -0.015877
+   15  LI 1 YZ    0.051480   0.003136  -0.000000   0.015877   0.633085
+   16  LI 2  S   -0.000000  -0.000000   0.167382  -0.000000   0.000000
+   17  LI 2  S   -0.000000  -0.000000   2.373477  -0.000000   0.000000
+   18  LI 2  X    0.080135  -1.315525  -0.000000   0.178366  -0.004473
+   19  LI 2  Y   -1.315525  -0.080135  -0.000000   0.004473   0.178366
+   20  LI 2  Z   -0.000000  -0.000000   0.986006  -0.000000   0.000000
+   21  LI 2  S   -0.000000  -0.000000  -6.020621  -0.000000   0.000000
+   22  LI 2  X   -0.080599   1.323141  -0.000000  -0.083750   0.002100
+   23  LI 2  Y    1.323141   0.080599  -0.000000  -0.002100  -0.083750
+   24  LI 2  Z   -0.000000  -0.000000  -2.825153  -0.000000   0.000000
+   25  LI 2 XX   -0.000000  -0.000000   0.099932  -0.000000   0.000000
+   26  LI 2 YY   -0.000000  -0.000000   0.099932  -0.000000   0.000000
+   27  LI 2 ZZ   -0.000000  -0.000000  -0.354588  -0.000000   0.000000
+   28  LI 2 XY   -0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   29  LI 2 XZ   -0.003136   0.051480  -0.000000  -0.633085   0.015877
+   30  LI 2 YZ    0.051480   0.003136  -0.000000  -0.015877  -0.633085
+
+                     21         22         23         24         25
+                    0.5610     0.5610     0.6270     0.6270     0.6532
+                     A          A          A          A          A   
+    1  LI 1  S   -0.000000   0.000000   0.000000  -0.000000  -0.043139
+    2  LI 1  S   -0.000000   0.000000   0.000000  -0.000000  -0.661546
+    3  LI 1  X   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+    4  LI 1  Y   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+    5  LI 1  Z   -0.000000   0.000000   0.000000  -0.000000   0.234636
+    6  LI 1  S   -0.000000   0.000000   0.000000  -0.000000   0.348487
+    7  LI 1  X   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+    8  LI 1  Y   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+    9  LI 1  Z   -0.000000   0.000000   0.000000  -0.000000  -0.364994
+   10  LI 1 XX    0.007910  -0.593852  -0.002751   0.632672  -0.274456
+   11  LI 1 YY   -0.007910   0.593852   0.002751  -0.632672  -0.274456
+   12  LI 1 ZZ   -0.000000   0.000000   0.000000  -0.000000   0.740072
+   13  LI 1 XY    0.685721   0.009134   0.730547   0.003176  -0.000000
+   14  LI 1 XZ   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   15  LI 1 YZ   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   16  LI 2  S   -0.000000   0.000000   0.000000  -0.000000  -0.043139
+   17  LI 2  S   -0.000000   0.000000   0.000000  -0.000000  -0.661546
+   18  LI 2  X   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   19  LI 2  Y   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   20  LI 2  Z   -0.000000   0.000000   0.000000  -0.000000  -0.234636
+   21  LI 2  S   -0.000000   0.000000   0.000000  -0.000000   0.348487
+   22  LI 2  X   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   23  LI 2  Y   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   24  LI 2  Z   -0.000000   0.000000   0.000000  -0.000000   0.364994
+   25  LI 2 XX    0.007910  -0.593852   0.002751  -0.632672  -0.274456
+   26  LI 2 YY   -0.007910   0.593852  -0.002751   0.632672  -0.274456
+   27  LI 2 ZZ   -0.000000   0.000000   0.000000  -0.000000   0.740072
+   28  LI 2 XY    0.685721   0.009134  -0.730547  -0.003176  -0.000000
+   29  LI 2 XZ   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   30  LI 2 YZ   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+
+                     26         27         28         29         30
+                    0.7652     0.7652     0.9943     1.2462     1.4766
+                     A          A          A          A          A   
+    1  LI 1  S   -0.000000  -0.000000  -0.032970   0.023680   0.271172
+    2  LI 1  S   -0.000000  -0.000000   0.308625   6.346514   9.301400
+    3  LI 1  X    0.003907  -0.296770  -0.000000  -0.000000   0.000000
+    4  LI 1  Y   -0.296770  -0.003907  -0.000000  -0.000000   0.000000
+    5  LI 1  Z   -0.000000  -0.000000   1.772737   0.001326  -0.871825
+    6  LI 1  S   -0.000000  -0.000000  -0.540027  -1.798757  -6.072406
+    7  LI 1  X    0.000172  -0.013075  -0.000000  -0.000000   0.000000
+    8  LI 1  Y   -0.013075  -0.000172  -0.000000  -0.000000   0.000000
+    9  LI 1  Z   -0.000000  -0.000000  -0.326736   0.075767   1.699411
+   10  LI 1 XX   -0.000000  -0.000000   0.017292  -2.234035  -2.641331
+   11  LI 1 YY   -0.000000  -0.000000   0.017292  -2.234035  -2.641331
+   12  LI 1 ZZ   -0.000000  -0.000000  -1.705306  -2.068301  -2.426466
+   13  LI 1 XY   -0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   14  LI 1 XZ   -0.011524   0.875438  -0.000000  -0.000000   0.000000
+   15  LI 1 YZ    0.875438   0.011524  -0.000000  -0.000000   0.000000
+   16  LI 2  S   -0.000000  -0.000000   0.032970   0.023680  -0.271172
+   17  LI 2  S   -0.000000  -0.000000  -0.308625   6.346514  -9.301400
+   18  LI 2  X   -0.003907   0.296770  -0.000000  -0.000000   0.000000
+   19  LI 2  Y    0.296770   0.003907  -0.000000  -0.000000   0.000000
+   20  LI 2  Z   -0.000000  -0.000000   1.772737  -0.001326  -0.871825
+   21  LI 2  S   -0.000000  -0.000000   0.540027  -1.798757   6.072406
+   22  LI 2  X   -0.000172   0.013075  -0.000000  -0.000000   0.000000
+   23  LI 2  Y    0.013075   0.000172  -0.000000  -0.000000   0.000000
+   24  LI 2  Z   -0.000000  -0.000000  -0.326736  -0.075767   1.699411
+   25  LI 2 XX   -0.000000  -0.000000  -0.017292  -2.234035   2.641331
+   26  LI 2 YY   -0.000000  -0.000000  -0.017292  -2.234035   2.641331
+   27  LI 2 ZZ   -0.000000  -0.000000   1.705306  -2.068301   2.426466
+   28  LI 2 XY   -0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   29  LI 2 XZ   -0.011524   0.875438  -0.000000  -0.000000   0.000000
+   30  LI 2 YZ    0.875438   0.011524  -0.000000  -0.000000   0.000000
+
+ LZ VALUE ANALYSIS FOR THE MOS
+ ----------------------------------------
+ MO     1 (    1) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     2 (    2) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     3 (    3) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     4 (    4) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     5 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     6 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     7 (    6) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     8 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     9 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    10 (    8) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    11 (    9) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    12 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    13 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    14 (   11) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    15 (   12) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    16 (   13) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    17 (   13) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    18 (   14) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    19 (   15) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    20 (   15) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    21 (   16) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    22 (   16) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    23 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    24 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    25 (   18) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    26 (   19) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    27 (   19) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    28 (   20) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    29 (   21) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    30 (   22) HAS LZ(WEIGHT)= 0.00(100.0%) 
+
+  ----- BETA SET ----- 
+
+          ------------
+          EIGENVECTORS
+          ------------
+
+                      1          2          3          4          5
+                   -2.4445    -2.4443    -0.1763     0.0155     0.0458
+                     A          A          A          A          A   
+    1  LI 1  S    0.706134  -0.705998  -0.147959  -0.099518   0.000000
+    2  LI 1  S   -0.006503   0.011145   0.107771  -0.018601   0.000000
+    3  LI 1  X    0.000000  -0.000000   0.000000  -0.000000   0.013058
+    4  LI 1  Y    0.000000  -0.000000   0.000000  -0.000000   0.060834
+    5  LI 1  Z    0.002285  -0.005195  -0.106712   0.039914   0.000000
+    6  LI 1  S    0.000202  -0.004363   0.398158  -0.141169   0.000000
+    7  LI 1  X    0.000000  -0.000000   0.000000  -0.000000   0.107105
+    8  LI 1  Y    0.000000  -0.000000   0.000000  -0.000000   0.498966
+    9  LI 1  Z   -0.001985   0.003493   0.020650   0.742935   0.000000
+   10  LI 1 XX    0.005849  -0.006761   0.025249   0.030528   0.000000
+   11  LI 1 YY    0.005849  -0.006761   0.025249   0.030528   0.000000
+   12  LI 1 ZZ    0.006083  -0.005631   0.034038   0.031336   0.000000
+   13  LI 1 XY    0.000000  -0.000000   0.000000  -0.000000   0.000000
+   14  LI 1 XZ    0.000000  -0.000000   0.000000  -0.000000   0.000710
+   15  LI 1 YZ    0.000000  -0.000000   0.000000  -0.000000   0.003309
+   16  LI 2  S    0.706134   0.705998  -0.147959   0.099518   0.000000
+   17  LI 2  S   -0.006503  -0.011145   0.107771   0.018601   0.000000
+   18  LI 2  X    0.000000  -0.000000   0.000000  -0.000000   0.013058
+   19  LI 2  Y    0.000000  -0.000000   0.000000  -0.000000   0.060834
+   20  LI 2  Z   -0.002285  -0.005195   0.106712   0.039914   0.000000
+   21  LI 2  S    0.000202   0.004363   0.398158   0.141169   0.000000
+   22  LI 2  X    0.000000  -0.000000   0.000000  -0.000000   0.107105
+   23  LI 2  Y    0.000000  -0.000000   0.000000  -0.000000   0.498966
+   24  LI 2  Z    0.001985   0.003493  -0.020650   0.742935   0.000000
+   25  LI 2 XX    0.005849   0.006761   0.025249  -0.030528   0.000000
+   26  LI 2 YY    0.005849   0.006761   0.025249  -0.030528   0.000000
+   27  LI 2 ZZ    0.006083   0.005631   0.034038  -0.031336   0.000000
+   28  LI 2 XY    0.000000  -0.000000   0.000000  -0.000000   0.000000
+   29  LI 2 XZ    0.000000  -0.000000   0.000000  -0.000000  -0.000710
+   30  LI 2 YZ    0.000000  -0.000000   0.000000  -0.000000  -0.003309
+
+                      6          7          8          9         10
+                    0.0458     0.0616     0.0908     0.0908     0.1375
+                     A          A          A          A          A   
+    1  LI 1  S    0.000000   0.002825   0.000000  -0.000000  -0.147579
+    2  LI 1  S    0.000000  -0.256166   0.000000  -0.000000   0.037954
+    3  LI 1  X    0.060834   0.000000  -0.004332  -0.045159   0.000000
+    4  LI 1  Y   -0.013058   0.000000   0.045159  -0.004332   0.000000
+    5  LI 1  Z    0.000000   0.073306   0.000000  -0.000000   0.301215
+    6  LI 1  S    0.000000   0.535928   0.000000  -0.000000   4.326257
+    7  LI 1  X    0.498966   0.000000   0.111991   1.167480   0.000000
+    8  LI 1  Y   -0.107105   0.000000  -1.167480   0.111991   0.000000
+    9  LI 1  Z    0.000000   0.689011   0.000000  -0.000000  -2.819561
+   10  LI 1 XX    0.000000   0.030801   0.000000  -0.000000  -0.010029
+   11  LI 1 YY    0.000000   0.030801   0.000000  -0.000000  -0.010029
+   12  LI 1 ZZ    0.000000   0.030089   0.000000  -0.000000   0.012668
+   13  LI 1 XY    0.000000   0.000000   0.000000  -0.000000   0.000000
+   14  LI 1 XZ    0.003309   0.000000   0.000820   0.008543   0.000000
+   15  LI 1 YZ   -0.000710   0.000000  -0.008543   0.000820   0.000000
+   16  LI 2  S    0.000000   0.002825   0.000000  -0.000000   0.147579
+   17  LI 2  S    0.000000  -0.256166   0.000000  -0.000000  -0.037954
+   18  LI 2  X    0.060834   0.000000   0.004332   0.045159   0.000000
+   19  LI 2  Y   -0.013058   0.000000  -0.045159   0.004332   0.000000
+   20  LI 2  Z    0.000000  -0.073306   0.000000  -0.000000   0.301215
+   21  LI 2  S    0.000000   0.535928   0.000000  -0.000000  -4.326257
+   22  LI 2  X    0.498966   0.000000  -0.111991  -1.167480   0.000000
+   23  LI 2  Y   -0.107105   0.000000   1.167480  -0.111991   0.000000
+   24  LI 2  Z    0.000000  -0.689011   0.000000  -0.000000  -2.819561
+   25  LI 2 XX    0.000000   0.030801   0.000000  -0.000000   0.010029
+   26  LI 2 YY    0.000000   0.030801   0.000000  -0.000000   0.010029
+   27  LI 2 ZZ    0.000000   0.030089   0.000000  -0.000000  -0.012668
+   28  LI 2 XY    0.000000   0.000000   0.000000  -0.000000   0.000000
+   29  LI 2 XZ   -0.003309   0.000000   0.000820   0.008543   0.000000
+   30  LI 2 YZ    0.000710   0.000000  -0.008543   0.000820   0.000000
+
+                     11         12         13         14         15
+                    0.1936     0.2107     0.2107     0.2133     0.2599
+                     A          A          A          A          A   
+    1  LI 1  S    0.058017   0.000000   0.000000   0.051346  -0.110015
+    2  LI 1  S    1.327314   0.000000   0.000000   1.932642  -1.554943
+    3  LI 1  X   -0.000000  -0.173186   1.087702   0.000000  -0.000000
+    4  LI 1  Y   -0.000000   1.087702   0.173186   0.000000  -0.000000
+    5  LI 1  Z   -0.785907   0.000000   0.000000   0.702908  -1.038363
+    6  LI 1  S   -0.793095   0.000000   0.000000  -1.360269   4.393795
+    7  LI 1  X   -0.000000   0.134704  -0.846012   0.000000  -0.000000
+    8  LI 1  Y   -0.000000  -0.846012  -0.134704   0.000000  -0.000000
+    9  LI 1  Z    1.077750   0.000000   0.000000  -0.505128  -1.109631
+   10  LI 1 XX   -0.132836   0.000000   0.000000  -0.212789   0.135014
+   11  LI 1 YY   -0.132836   0.000000   0.000000  -0.212789   0.135014
+   12  LI 1 ZZ   -0.124688   0.000000   0.000000  -0.165947   0.060629
+   13  LI 1 XY   -0.000000   0.000000   0.000000   0.000000  -0.000000
+   14  LI 1 XZ   -0.000000   0.001220  -0.007659   0.000000  -0.000000
+   15  LI 1 YZ   -0.000000  -0.007659  -0.001220   0.000000  -0.000000
+   16  LI 2  S    0.058017   0.000000   0.000000   0.051346   0.110015
+   17  LI 2  S    1.327314   0.000000   0.000000   1.932642   1.554943
+   18  LI 2  X   -0.000000  -0.173186   1.087702   0.000000  -0.000000
+   19  LI 2  Y   -0.000000   1.087702   0.173186   0.000000  -0.000000
+   20  LI 2  Z    0.785907   0.000000   0.000000  -0.702908  -1.038363
+   21  LI 2  S   -0.793095   0.000000   0.000000  -1.360269  -4.393795
+   22  LI 2  X   -0.000000   0.134704  -0.846012   0.000000  -0.000000
+   23  LI 2  Y   -0.000000  -0.846012  -0.134704   0.000000  -0.000000
+   24  LI 2  Z   -1.077750   0.000000   0.000000   0.505128  -1.109631
+   25  LI 2 XX   -0.132836   0.000000   0.000000  -0.212789  -0.135014
+   26  LI 2 YY   -0.132836   0.000000   0.000000  -0.212789  -0.135014
+   27  LI 2 ZZ   -0.124688   0.000000   0.000000  -0.165947  -0.060629
+   28  LI 2 XY   -0.000000   0.000000   0.000000   0.000000  -0.000000
+   29  LI 2 XZ   -0.000000  -0.001220   0.007659   0.000000  -0.000000
+   30  LI 2 YZ   -0.000000   0.007659   0.001220   0.000000  -0.000000
+
+                     16         17         18         19         20
+                    0.2633     0.2633     0.4661     0.5312     0.5312
+                     A          A          A          A          A   
+    1  LI 1  S   -0.000000  -0.000000  -0.167382  -0.000000   0.000000
+    2  LI 1  S   -0.000000  -0.000000  -2.373477  -0.000000   0.000000
+    3  LI 1  X   -0.080135   1.315525  -0.000000   0.178366  -0.004473
+    4  LI 1  Y    1.315525   0.080135  -0.000000   0.004473   0.178366
+    5  LI 1  Z   -0.000000  -0.000000   0.986006  -0.000000   0.000000
+    6  LI 1  S   -0.000000  -0.000000   6.020621  -0.000000   0.000000
+    7  LI 1  X    0.080599  -1.323141  -0.000000  -0.083750   0.002100
+    8  LI 1  Y   -1.323141  -0.080599  -0.000000  -0.002100  -0.083750
+    9  LI 1  Z   -0.000000  -0.000000  -2.825153  -0.000000   0.000000
+   10  LI 1 XX   -0.000000  -0.000000  -0.099932  -0.000000   0.000000
+   11  LI 1 YY   -0.000000  -0.000000  -0.099932  -0.000000   0.000000
+   12  LI 1 ZZ   -0.000000  -0.000000   0.354588  -0.000000   0.000000
+   13  LI 1 XY   -0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   14  LI 1 XZ   -0.003136   0.051480  -0.000000   0.633085  -0.015877
+   15  LI 1 YZ    0.051480   0.003136  -0.000000   0.015877   0.633085
+   16  LI 2  S   -0.000000  -0.000000   0.167382  -0.000000   0.000000
+   17  LI 2  S   -0.000000  -0.000000   2.373477  -0.000000   0.000000
+   18  LI 2  X    0.080135  -1.315525  -0.000000   0.178366  -0.004473
+   19  LI 2  Y   -1.315525  -0.080135  -0.000000   0.004473   0.178366
+   20  LI 2  Z   -0.000000  -0.000000   0.986006  -0.000000   0.000000
+   21  LI 2  S   -0.000000  -0.000000  -6.020621  -0.000000   0.000000
+   22  LI 2  X   -0.080599   1.323141  -0.000000  -0.083750   0.002100
+   23  LI 2  Y    1.323141   0.080599  -0.000000  -0.002100  -0.083750
+   24  LI 2  Z   -0.000000  -0.000000  -2.825153  -0.000000   0.000000
+   25  LI 2 XX   -0.000000  -0.000000   0.099932  -0.000000   0.000000
+   26  LI 2 YY   -0.000000  -0.000000   0.099932  -0.000000   0.000000
+   27  LI 2 ZZ   -0.000000  -0.000000  -0.354588  -0.000000   0.000000
+   28  LI 2 XY   -0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   29  LI 2 XZ   -0.003136   0.051480  -0.000000  -0.633085   0.015877
+   30  LI 2 YZ    0.051480   0.003136  -0.000000  -0.015877  -0.633085
+
+                     21         22         23         24         25
+                    0.5610     0.5610     0.6270     0.6270     0.6532
+                     A          A          A          A          A   
+    1  LI 1  S   -0.000000   0.000000   0.000000  -0.000000  -0.043139
+    2  LI 1  S   -0.000000   0.000000   0.000000  -0.000000  -0.661546
+    3  LI 1  X   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+    4  LI 1  Y   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+    5  LI 1  Z   -0.000000   0.000000   0.000000  -0.000000   0.234636
+    6  LI 1  S   -0.000000   0.000000   0.000000  -0.000000   0.348487
+    7  LI 1  X   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+    8  LI 1  Y   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+    9  LI 1  Z   -0.000000   0.000000   0.000000  -0.000000  -0.364994
+   10  LI 1 XX    0.007910  -0.593852  -0.002751   0.632672  -0.274456
+   11  LI 1 YY   -0.007910   0.593852   0.002751  -0.632672  -0.274456
+   12  LI 1 ZZ   -0.000000   0.000000   0.000000  -0.000000   0.740072
+   13  LI 1 XY    0.685721   0.009134   0.730547   0.003176  -0.000000
+   14  LI 1 XZ   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   15  LI 1 YZ   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   16  LI 2  S   -0.000000   0.000000   0.000000  -0.000000  -0.043139
+   17  LI 2  S   -0.000000   0.000000   0.000000  -0.000000  -0.661546
+   18  LI 2  X   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   19  LI 2  Y   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   20  LI 2  Z   -0.000000   0.000000   0.000000  -0.000000  -0.234636
+   21  LI 2  S   -0.000000   0.000000   0.000000  -0.000000   0.348487
+   22  LI 2  X   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   23  LI 2  Y   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   24  LI 2  Z   -0.000000   0.000000   0.000000  -0.000000   0.364994
+   25  LI 2 XX    0.007910  -0.593852   0.002751  -0.632672  -0.274456
+   26  LI 2 YY   -0.007910   0.593852  -0.002751   0.632672  -0.274456
+   27  LI 2 ZZ   -0.000000   0.000000   0.000000  -0.000000   0.740072
+   28  LI 2 XY    0.685721   0.009134  -0.730547  -0.003176  -0.000000
+   29  LI 2 XZ   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+   30  LI 2 YZ   -0.000000   0.000000   0.000000  -0.000000  -0.000000
+
+                     26         27         28         29         30
+                    0.7652     0.7652     0.9943     1.2462     1.4766
+                     A          A          A          A          A   
+    1  LI 1  S   -0.000000  -0.000000  -0.032970   0.023680   0.271172
+    2  LI 1  S   -0.000000  -0.000000   0.308625   6.346514   9.301400
+    3  LI 1  X    0.003907  -0.296770  -0.000000  -0.000000   0.000000
+    4  LI 1  Y   -0.296770  -0.003907  -0.000000  -0.000000   0.000000
+    5  LI 1  Z   -0.000000  -0.000000   1.772737   0.001326  -0.871825
+    6  LI 1  S   -0.000000  -0.000000  -0.540027  -1.798757  -6.072406
+    7  LI 1  X    0.000172  -0.013075  -0.000000  -0.000000   0.000000
+    8  LI 1  Y   -0.013075  -0.000172  -0.000000  -0.000000   0.000000
+    9  LI 1  Z   -0.000000  -0.000000  -0.326736   0.075767   1.699411
+   10  LI 1 XX   -0.000000  -0.000000   0.017292  -2.234035  -2.641331
+   11  LI 1 YY   -0.000000  -0.000000   0.017292  -2.234035  -2.641331
+   12  LI 1 ZZ   -0.000000  -0.000000  -1.705306  -2.068301  -2.426466
+   13  LI 1 XY   -0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   14  LI 1 XZ   -0.011524   0.875438  -0.000000  -0.000000   0.000000
+   15  LI 1 YZ    0.875438   0.011524  -0.000000  -0.000000   0.000000
+   16  LI 2  S   -0.000000  -0.000000   0.032970   0.023680  -0.271172
+   17  LI 2  S   -0.000000  -0.000000  -0.308625   6.346514  -9.301400
+   18  LI 2  X   -0.003907   0.296770  -0.000000  -0.000000   0.000000
+   19  LI 2  Y    0.296770   0.003907  -0.000000  -0.000000   0.000000
+   20  LI 2  Z   -0.000000  -0.000000   1.772737  -0.001326  -0.871825
+   21  LI 2  S   -0.000000  -0.000000   0.540027  -1.798757   6.072406
+   22  LI 2  X   -0.000172   0.013075  -0.000000  -0.000000   0.000000
+   23  LI 2  Y    0.013075   0.000172  -0.000000  -0.000000   0.000000
+   24  LI 2  Z   -0.000000  -0.000000  -0.326736  -0.075767   1.699411
+   25  LI 2 XX   -0.000000  -0.000000  -0.017292  -2.234035   2.641331
+   26  LI 2 YY   -0.000000  -0.000000  -0.017292  -2.234035   2.641331
+   27  LI 2 ZZ   -0.000000  -0.000000   1.705306  -2.068301   2.426466
+   28  LI 2 XY   -0.000000  -0.000000  -0.000000  -0.000000   0.000000
+   29  LI 2 XZ   -0.011524   0.875438  -0.000000  -0.000000   0.000000
+   30  LI 2 YZ    0.875438   0.011524  -0.000000  -0.000000   0.000000
+ ...... END OF UHF CALCULATION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    96.60%
+
+     ----------------------------------------------------------------
+     PROPERTY VALUES FOR THE UHF   SELF-CONSISTENT FIELD WAVEFUNCTION
+     ----------------------------------------------------------------
+
+          -----------------
+          ENERGY COMPONENTS
+          -----------------
+
+         WAVEFUNCTION NORMALIZATION =       1.0000000000
+
+                ONE ELECTRON ENERGY =     -23.0285750175
+                TWO ELECTRON ENERGY =       6.4491958059
+           NUCLEAR REPULSION ENERGY =       1.7124727799
+                                      ------------------
+                       TOTAL ENERGY =     -14.8669064317
+
+ ELECTRON-ELECTRON POTENTIAL ENERGY =       6.4491958059
+  NUCLEUS-ELECTRON POTENTIAL ENERGY =     -37.9825893169
+   NUCLEUS-NUCLEUS POTENTIAL ENERGY =       1.7124727799
+                                      ------------------
+             TOTAL POTENTIAL ENERGY =     -29.8209207311
+               TOTAL KINETIC ENERGY =      14.9540142995
+                 VIRIAL RATIO (V/T) =       1.9941749509
+
+  ...... PI ENERGY ANALYSIS ......
+
+ ENERGY ANALYSIS:
+            FOCK ENERGY=    -10.1301833371
+          BARE H ENERGY=    -23.0285750175
+     ELECTRONIC ENERGY =    -16.5793791773
+         KINETIC ENERGY=     14.9540142995
+          N-N REPULSION=      1.7124727799
+           TOTAL ENERGY=    -14.8669063973
+        SIGMA PART(1+2)=    -16.5793791773
+               (K,V1,2)=     14.9540142995    -37.9825893169      6.4491958402
+           PI PART(1+2)=      0.0000000000
+               (K,V1,2)=      0.0000000000      0.0000000000      0.0000000000
+  SIGMA SKELETON, ERROR=    -14.8669063973      0.0000000000
+             MIXED PART= 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00
+ ...... END OF PI ENERGY ANALYSIS ......
+
+          ---------------------------------------
+          MULLIKEN AND LOWDIN POPULATION ANALYSES
+          ---------------------------------------
+
+     ATOMIC MULLIKEN POPULATION IN EACH MOLECULAR ORBITAL
+        ALPHA ORBITALS
+
+                      1          2          3
+
+                  1.000000   1.000000   1.000000
+
+    1             0.500000   0.500000   0.500000
+    2             0.500000   0.500000   0.500000
+
+     ATOMIC MULLIKEN POPULATION IN EACH MOLECULAR ORBITAL
+         BETA ORBITALS
+
+                      1          2          3
+
+                  1.000000   1.000000   1.000000
+
+    1             0.500000   0.500000   0.500000
+    2             0.500000   0.500000   0.500000
+
+     ATOMIC SPIN POPULATION (ALPHA MINUS BETA)
+       ATOM         MULL.POP.                    LOW.POP.
+    1 LI            0.000000                     0.000000
+    2 LI            0.000000                     0.000000
+
+
+          ********* ALL ELECTRONS ********
+
+               ----- POPULATIONS IN EACH AO -----
+                             MULLIKEN      LOWDIN
+              1  LI 1  S      1.99878     1.98709
+              2  LI 1  S      0.16537     0.23400
+              3  LI 1  X      0.00000     0.00000
+              4  LI 1  Y      0.00000     0.00000
+              5  LI 1  Z      0.07621     0.04814
+              6  LI 1  S      0.68183     0.45209
+              7  LI 1  X      0.00000     0.00000
+              8  LI 1  Y      0.00000     0.00000
+              9  LI 1  Z     -0.01705     0.04085
+             10  LI 1 XX      0.02689     0.07315
+             11  LI 1 YY      0.02689     0.07315
+             12  LI 1 ZZ      0.04108     0.09153
+             13  LI 1 XY      0.00000     0.00000
+             14  LI 1 XZ      0.00000     0.00000
+             15  LI 1 YZ      0.00000     0.00000
+             16  LI 2  S      1.99878     1.98709
+             17  LI 2  S      0.16537     0.23400
+             18  LI 2  X      0.00000     0.00000
+             19  LI 2  Y      0.00000     0.00000
+             20  LI 2  Z      0.07621     0.04814
+             21  LI 2  S      0.68183     0.45209
+             22  LI 2  X      0.00000     0.00000
+             23  LI 2  Y      0.00000     0.00000
+             24  LI 2  Z     -0.01705     0.04085
+             25  LI 2 XX      0.02689     0.07315
+             26  LI 2 YY      0.02689     0.07315
+             27  LI 2 ZZ      0.04108     0.09153
+             28  LI 2 XY      0.00000     0.00000
+             29  LI 2 XZ      0.00000     0.00000
+             30  LI 2 YZ      0.00000     0.00000
+
+          ----- MULLIKEN ATOMIC OVERLAP POPULATIONS -----
+          (OFF-DIAGONAL ELEMENTS NEED TO BE MULTIPLIED BY 2)
+
+             1           2
+
+    1    2.6126365
+    2    0.3873635   2.6126365
+
+          TOTAL MULLIKEN AND LOWDIN ATOMIC POPULATIONS
+       ATOM         MULL.POP.    CHARGE          LOW.POP.     CHARGE
+    1 LI            3.000000   -0.000000         3.000000   -0.000000
+    2 LI            3.000000    0.000000         3.000000   -0.000000
+
+          -------------------------------
+          BOND ORDER AND VALENCE ANALYSIS     BOND ORDER THRESHOLD=0.050
+          -------------------------------
+
+                   BOND                       BOND                       BOND
+  ATOM PAIR DIST  ORDER      ATOM PAIR DIST  ORDER      ATOM PAIR DIST  ORDER
+    1   2  2.781  1.000
+
+                       TOTAL       BONDED        FREE
+      ATOM            VALENCE     VALENCE     VALENCE
+    1 LI                1.000       1.000      -0.000
+    2 LI                1.000       1.000      -0.000
+
+          -----------------------------------------
+          ATOMIC SPIN DENSITY AT THE NUCLEUS (A.U.)
+          -----------------------------------------
+                            SPIN DENS    ALPHA DENS     BETA DENS
+    1  LI           3.0     0.0000000       6.48318       6.48318
+    2  LI           3.0     0.0000000       6.48318       6.48318
+
+          ---------------------
+          ELECTROSTATIC MOMENTS
+          ---------------------
+
+ POINT   1           X           Y           Z (BOHR)    CHARGE
+                 0.000000    0.000000    0.000000       -0.00 (A.U.)
+         DX          DY          DZ         /D/  (DEBYE)
+     0.000000    0.000000   -0.000000    0.000000
+ ...... END OF PROPERTY EVALUATION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    96.84%
+
+ BEGINNING ONE ELECTRON GRADIENT...
+ ..... END OF 1-ELECTRON GRADIENT ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    96.91%
+
+          ----------------------
+          GRADIENT OF THE ENERGY
+          ----------------------
+
+ THE MINIMUM MEMORY REQUIRED FOR THIS RUN IS      72824 WORDS.
+ USING     999568 WORDS FOR 2E- DERIVATIVE INTEGRAL CONTRIBUTIONS.
+ THE COARSE/FINE SCHWARZ SCREENINGS SKIPPED            0/           0 BLOCKS.
+ THE NUMBER OF GRADIENT INTEGRAL BLOCKS COMPUTED WAS       556
+ ...... END OF 2-ELECTRON GRADIENT ......
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    97.98%
+
+          NSERCH=  0     ENERGY=     -14.8669064
+
+                                 -----------------------
+                                 GRADIENT (HARTREE/BOHR)
+                                 -----------------------
+        ATOM     ZNUC       DE/DX         DE/DY         DE/DZ
+ --------------------------------------------------------------
+    1  LI           3.0     0.0000000     0.0000000    -0.0007684
+    2  LI           3.0     0.0000000     0.0000000     0.0007684
+
+          MAXIMUM GRADIENT = 0.0007684    RMS GRADIENT = 0.0004436
+
+ NSERCH:   0  E=      -14.8669064317  GRAD. MAX=  0.0007684  R.M.S.=  0.0004436
+
+          FORCE CONSTANT MATRIX NOT UPDATED --- TAKING FIRST STEP
+          MIN SEARCH, CORRECT HESSIAN, TRYING PURE NR STEP
+               NR STEP HAS LENGTH         =   0.002817
+          RADIUS OF STEP TAKEN=   0.00282  CURRENT TRUST RADIUS=   0.30000
+
+ BEGINNING GEOMETRY SEARCH POINT NSERCH=   1 ...
+
+ COORDINATES OF ALL ATOMS ARE (ANGS)
+   ATOM   CHARGE       X              Y              Z
+ ------------------------------------------------------------
+ LI          3.0   0.0000000000   0.0000000000   1.3916148337
+ LI          3.0   0.0000000000   0.0000000000  -1.3916148337
+
+          INTERNUCLEAR DISTANCES (ANGS.)
+          ------------------------------
+
+                1 LI         2 LI    
+
+   1 LI      0.0000000    2.7832297 *
+   2 LI      2.7832297 *  0.0000000  
+
+  * ... LESS THAN  3.000
+
+ ...... END OF ONE-ELECTRON INTEGRALS ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    97.99%
+ TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =               28696
+          2 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
+  ...... END OF TWO-ELECTRON INTEGRALS .....
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.02%
+
+          ---------------------------
+                  UHF SCF CALCULATION
+          ---------------------------
+     DENSITY MATRIX CONV=  1.00E-05
+
+ ITER EX      TOTAL ENERGY        E CHANGE  DENSITY CHANGE    ORB. GRAD 
+          ---------------START SECOND ORDER SCF---------------
+   1  0      -14.8669093548   -14.8669093548   0.000100611   0.000029471
+   2  1      -14.8669093632    -0.0000000084   0.000042963   0.000008725
+   3  2      -14.8669093638    -0.0000000007   0.000002049   0.000000726
+   4  3      -14.8669093639    -0.0000000000   0.000000860   0.000000188
+
+          -----------------
+          DENSITY CONVERGED
+          -----------------
+     TIME TO FORM FOCK OPERATORS=       0.0 SECONDS (       0.0 SEC/ITER)
+     TIME TO SOLVE SCF EQUATIONS=       0.0 SECONDS (       0.0 SEC/ITER)
+
+ FINAL UHF ENERGY IS      -14.8669093639 AFTER   4 ITERATIONS
+
+          --------------------
+          SPIN SZ   =    0.000
+          S-SQUARED =    0.000
+          --------------------
+
+ LZ VALUE ANALYSIS FOR THE MOS
+ ----------------------------------------
+ MO     1 (    1) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     2 (    2) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     3 (    3) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     4 (    4) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     5 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     6 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     7 (    6) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     8 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     9 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    10 (    8) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    11 (    9) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    12 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    13 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    14 (   11) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    15 (   12) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    16 (   13) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    17 (   13) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    18 (   14) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    19 (   15) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    20 (   15) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    21 (   16) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    22 (   16) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    23 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    24 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    25 (   18) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    26 (   19) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    27 (   19) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    28 (   20) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    29 (   21) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    30 (   22) HAS LZ(WEIGHT)= 0.00(100.0%) 
+
+ LZ VALUE ANALYSIS FOR THE MOS
+ ----------------------------------------
+ MO     1 (    1) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     2 (    2) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     3 (    3) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     4 (    4) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     5 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     6 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     7 (    6) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     8 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     9 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    10 (    8) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    11 (    9) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    12 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    13 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    14 (   11) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    15 (   12) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    16 (   13) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    17 (   13) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    18 (   14) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    19 (   15) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    20 (   15) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    21 (   16) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    22 (   16) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    23 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    24 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    25 (   18) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    26 (   19) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    27 (   19) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    28 (   20) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    29 (   21) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    30 (   22) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ ...... END OF UHF CALCULATION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.09%
+ ..... END OF 1-ELECTRON GRADIENT ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.07%
+ ...... END OF 2-ELECTRON GRADIENT ......
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.49%
+
+          NSERCH=  1     ENERGY=     -14.8669094
+
+                                 -----------------------
+                                 GRADIENT (HARTREE/BOHR)
+                                 -----------------------
+        ATOM     ZNUC       DE/DX         DE/DY         DE/DZ
+ --------------------------------------------------------------
+    1  LI           3.0     0.0000000     0.0000000    -0.0007042
+    2  LI           3.0     0.0000000     0.0000000     0.0007042
+
+          MAXIMUM GRADIENT = 0.0007042    RMS GRADIENT = 0.0004066
+
+ NSERCH:   1  E=      -14.8669093639  GRAD. MAX=  0.0007042  R.M.S.=  0.0004066
+
+          HESSIAN UPDATED USING THE BFGS FORMULA
+             ACTUAL ENERGY CHANGE WAS  -0.0000029322
+          PREDICTED ENERGY CHANGE WAS  -0.0000015304 RATIO=  1.916
+          MIN SEARCH, CORRECT HESSIAN, TRYING PURE NR STEP
+               NR STEP HAS LENGTH         =   0.030937
+          RADIUS OF STEP TAKEN=   0.03094  CURRENT TRUST RADIUS=   0.05000
+
+ BEGINNING GEOMETRY SEARCH POINT NSERCH=   2 ...
+
+ COORDINATES OF ALL ATOMS ARE (ANGS)
+   ATOM   CHARGE       X              Y              Z
+ ------------------------------------------------------------
+ LI          3.0   0.0000000000   0.0000000000   1.4031908557
+ LI          3.0   0.0000000000   0.0000000000  -1.4031908557
+
+          INTERNUCLEAR DISTANCES (ANGS.)
+          ------------------------------
+
+                1 LI         2 LI    
+
+   1 LI      0.0000000    2.8063817 *
+   2 LI      2.8063817 *  0.0000000  
+
+  * ... LESS THAN  3.000
+
+ ...... END OF ONE-ELECTRON INTEGRALS ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.50%
+ TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =               28696
+          2 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
+  ...... END OF TWO-ELECTRON INTEGRALS .....
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.46%
+
+          ---------------------------
+                  UHF SCF CALCULATION
+          ---------------------------
+     DENSITY MATRIX CONV=  1.00E-05
+
+ ITER EX      TOTAL ENERGY        E CHANGE  DENSITY CHANGE    ORB. GRAD 
+          ---------------START SECOND ORDER SCF---------------
+   1  0      -14.8669239250   -14.8669239250   0.001111996   0.000323813
+   2  1      -14.8669249315    -0.0000010065   0.000475128   0.000095823
+   3  2      -14.8669250143    -0.0000000828   0.000022159   0.000007952
+   4  3      -14.8669250149    -0.0000000006   0.000009511   0.000002065
+   5  4      -14.8669250149    -0.0000000001   0.000002489   0.000000260
+
+          -----------------
+          DENSITY CONVERGED
+          -----------------
+     TIME TO FORM FOCK OPERATORS=       0.0 SECONDS (       0.0 SEC/ITER)
+     TIME TO SOLVE SCF EQUATIONS=       0.0 SECONDS (       0.0 SEC/ITER)
+
+ FINAL UHF ENERGY IS      -14.8669250149 AFTER   5 ITERATIONS
+
+          --------------------
+          SPIN SZ   =    0.000
+          S-SQUARED =   -0.000
+          --------------------
+
+ LZ VALUE ANALYSIS FOR THE MOS
+ ----------------------------------------
+ MO     1 (    1) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     2 (    2) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     3 (    3) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     4 (    4) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     5 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     6 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     7 (    6) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     8 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     9 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    10 (    8) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    11 (    9) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    12 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    13 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    14 (   11) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    15 (   12) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    16 (   13) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    17 (   13) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    18 (   14) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    19 (   15) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    20 (   15) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    21 (   16) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    22 (   16) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    23 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    24 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    25 (   18) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    26 (   19) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    27 (   19) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    28 (   20) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    29 (   21) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    30 (   22) HAS LZ(WEIGHT)= 0.00(100.0%) 
+
+ LZ VALUE ANALYSIS FOR THE MOS
+ ----------------------------------------
+ MO     1 (    1) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     2 (    2) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     3 (    3) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     4 (    4) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     5 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     6 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     7 (    6) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     8 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     9 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    10 (    8) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    11 (    9) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    12 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    13 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    14 (   11) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    15 (   12) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    16 (   13) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    17 (   13) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    18 (   14) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    19 (   15) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    20 (   15) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    21 (   16) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    22 (   16) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    23 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    24 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    25 (   18) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    26 (   19) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    27 (   19) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    28 (   20) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    29 (   21) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    30 (   22) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ ...... END OF UHF CALCULATION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.47%
+ ..... END OF 1-ELECTRON GRADIENT ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.47%
+ ...... END OF 2-ELECTRON GRADIENT ......
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    98.69%
+
+          NSERCH=  2     ENERGY=     -14.8669250
+
+                                 -----------------------
+                                 GRADIENT (HARTREE/BOHR)
+                                 -----------------------
+        ATOM     ZNUC       DE/DX         DE/DY         DE/DZ
+ --------------------------------------------------------------
+    1  LI           3.0     0.0000000     0.0000000    -0.0000168
+    2  LI           3.0     0.0000000     0.0000000     0.0000168
+
+          MAXIMUM GRADIENT = 0.0000168    RMS GRADIENT = 0.0000097
+
+ NSERCH:   2  E=      -14.8669250149  GRAD. MAX=  0.0000168  R.M.S.=  0.0000097
+
+
+      ***** EQUILIBRIUM GEOMETRY LOCATED *****
+ COORDINATES OF ALL ATOMS ARE (ANGS)
+   ATOM   CHARGE       X              Y              Z
+ ------------------------------------------------------------
+ LI          3.0   0.0000000000   0.0000000000   1.4031908557
+ LI          3.0   0.0000000000   0.0000000000  -1.4031908557
+
+          INTERNUCLEAR DISTANCES (ANGS.)
+          ------------------------------
+
+                1 LI         2 LI    
+
+   1 LI      0.0000000    2.8063817 *
+   2 LI      2.8063817 *  0.0000000  
+
+  * ... LESS THAN  3.000
+
+
+          NUCLEAR ENERGY    =        1.6970589653
+          ELECTRONIC ENERGY =      -16.5639839802
+          TOTAL ENERGY      =      -14.8669250149
+
+          SPIN SZ   =   0.000
+          S-SQUARED =  -0.000
+
+          ------------------
+          MOLECULAR ORBITALS
+          ------------------
+
+          **** ALPHA SET **** 
+
+                      1          2          3          4          5
+                   -2.4450    -2.4448    -0.1758     0.0151     0.0459
+                     A          A          A          A          A   
+    1  LI 1  S    0.706143  -0.706003  -0.147175  -0.100040   0.000000
+    2  LI 1  S   -0.006556   0.011096   0.107343  -0.018658   0.000000
+    3  LI 1  X    0.000000   0.000000   0.000000   0.000000  -0.025977
+    4  LI 1  Y    0.000000   0.000000   0.000000   0.000000   0.055700
+    5  LI 1  Z    0.002300  -0.005103  -0.105886   0.041017   0.000000
+    6  LI 1  S    0.000221  -0.004357   0.399942  -0.113504   0.000000
+    7  LI 1  X    0.000000   0.000000   0.000000   0.000000  -0.216382
+    8  LI 1  Y    0.000000   0.000000   0.000000   0.000000   0.463962
+    9  LI 1  Z   -0.001990   0.003488   0.019765   0.730447   0.000000
+   10  LI 1 XX    0.005864  -0.006764   0.025067   0.030616   0.000000
+   11  LI 1 YY    0.005864  -0.006764   0.025067   0.030616   0.000000
+   12  LI 1 ZZ    0.006082  -0.005688   0.033713   0.030363   0.000000
+   13  LI 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  LI 1 XZ    0.000000   0.000000   0.000000   0.000000  -0.001563
+   15  LI 1 YZ    0.000000   0.000000   0.000000   0.000000   0.003352
+   16  LI 2  S    0.706143   0.706003  -0.147175   0.100040   0.000000
+   17  LI 2  S   -0.006556  -0.011096   0.107343   0.018658   0.000000
+   18  LI 2  X    0.000000   0.000000   0.000000   0.000000  -0.025977
+   19  LI 2  Y    0.000000   0.000000   0.000000   0.000000   0.055700
+   20  LI 2  Z   -0.002300  -0.005103   0.105886   0.041017   0.000000
+   21  LI 2  S    0.000221   0.004357   0.399942   0.113504   0.000000
+   22  LI 2  X    0.000000   0.000000   0.000000   0.000000  -0.216382
+   23  LI 2  Y    0.000000   0.000000   0.000000   0.000000   0.463962
+   24  LI 2  Z    0.001990   0.003488  -0.019765   0.730447   0.000000
+   25  LI 2 XX    0.005864   0.006764   0.025067  -0.030616   0.000000
+   26  LI 2 YY    0.005864   0.006764   0.025067  -0.030616   0.000000
+   27  LI 2 ZZ    0.006082   0.005688   0.033713  -0.030363   0.000000
+   28  LI 2 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  LI 2 XZ    0.000000   0.000000   0.000000   0.000000   0.001563
+   30  LI 2 YZ    0.000000   0.000000   0.000000   0.000000  -0.003352
+
+                      6          7          8          9         10
+                    0.0459     0.0613     0.0905     0.0905     0.1371
+                     A          A          A          A          A   
+    1  LI 1  S    0.000000   0.001814   0.000000   0.000000   0.147247
+    2  LI 1  S    0.000000  -0.256428   0.000000   0.000000  -0.038811
+    3  LI 1  X   -0.055700   0.000000   0.042530  -0.012310   0.000000
+    4  LI 1  Y   -0.025977   0.000000   0.012310   0.042530   0.000000
+    5  LI 1  Z    0.000000   0.073006   0.000000   0.000000  -0.303157
+    6  LI 1  S    0.000000   0.534655   0.000000   0.000000  -4.209904
+    7  LI 1  X   -0.463962   0.000000  -1.117969   0.323591   0.000000
+    8  LI 1  Y   -0.216382   0.000000  -0.323591  -1.117969   0.000000
+    9  LI 1  Z    0.000000   0.685260   0.000000   0.000000   2.782607
+   10  LI 1 XX    0.000000   0.030841   0.000000   0.000000   0.009493
+   11  LI 1 YY    0.000000   0.030841   0.000000   0.000000   0.009493
+   12  LI 1 ZZ    0.000000   0.031034   0.000000   0.000000  -0.011136
+   13  LI 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  LI 1 XZ   -0.003352   0.000000  -0.008378   0.002425   0.000000
+   15  LI 1 YZ   -0.001563   0.000000  -0.002425  -0.008378   0.000000
+   16  LI 2  S    0.000000   0.001814   0.000000   0.000000  -0.147247
+   17  LI 2  S    0.000000  -0.256428   0.000000   0.000000   0.038811
+   18  LI 2  X   -0.055700   0.000000  -0.042530   0.012310   0.000000
+   19  LI 2  Y   -0.025977   0.000000  -0.012310  -0.042530   0.000000
+   20  LI 2  Z    0.000000  -0.073006   0.000000   0.000000  -0.303157
+   21  LI 2  S    0.000000   0.534655   0.000000   0.000000   4.209904
+   22  LI 2  X   -0.463962   0.000000   1.117969  -0.323591   0.000000
+   23  LI 2  Y   -0.216382   0.000000   0.323591   1.117969   0.000000
+   24  LI 2  Z    0.000000  -0.685260   0.000000   0.000000   2.782607
+   25  LI 2 XX    0.000000   0.030841   0.000000   0.000000  -0.009493
+   26  LI 2 YY    0.000000   0.030841   0.000000   0.000000  -0.009493
+   27  LI 2 ZZ    0.000000   0.031034   0.000000   0.000000   0.011136
+   28  LI 2 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  LI 2 XZ    0.003352   0.000000  -0.008378   0.002425   0.000000
+   30  LI 2 YZ    0.001563   0.000000  -0.002425  -0.008378   0.000000
+
+                     11         12         13
+                    0.1941     0.2112     0.2112
+                     A          A          A   
+    1  LI 1  S   -0.058403   0.000000   0.000000
+    2  LI 1  S   -1.307393   0.000000   0.000000
+    3  LI 1  X    0.000000  -1.084199  -0.208967
+    4  LI 1  Y    0.000000  -0.208967   1.084199
+    5  LI 1  Z    0.797351   0.000000   0.000000
+    6  LI 1  S    0.779117   0.000000   0.000000
+    7  LI 1  X    0.000000   0.842145   0.162314
+    8  LI 1  Y    0.000000   0.162314  -0.842145
+    9  LI 1  Z   -1.078977   0.000000   0.000000
+   10  LI 1 XX    0.130811   0.000000   0.000000
+   11  LI 1 YY    0.130811   0.000000   0.000000
+   12  LI 1 ZZ    0.122626   0.000000   0.000000
+   13  LI 1 XY    0.000000   0.000000   0.000000
+   14  LI 1 XZ    0.000000   0.007339   0.001414
+   15  LI 1 YZ    0.000000   0.001414  -0.007339
+   16  LI 2  S   -0.058403   0.000000   0.000000
+   17  LI 2  S   -1.307393   0.000000   0.000000
+   18  LI 2  X    0.000000  -1.084199  -0.208967
+   19  LI 2  Y    0.000000  -0.208967   1.084199
+   20  LI 2  Z   -0.797351   0.000000   0.000000
+   21  LI 2  S    0.779117   0.000000   0.000000
+   22  LI 2  X    0.000000   0.842145   0.162314
+   23  LI 2  Y    0.000000   0.162314  -0.842145
+   24  LI 2  Z    1.078977   0.000000   0.000000
+   25  LI 2 XX    0.130811   0.000000   0.000000
+   26  LI 2 YY    0.130811   0.000000   0.000000
+   27  LI 2 ZZ    0.122626   0.000000   0.000000
+   28  LI 2 XY    0.000000   0.000000   0.000000
+   29  LI 2 XZ    0.000000  -0.007339  -0.001414
+   30  LI 2 YZ    0.000000  -0.001414   0.007339
+
+          **** BETA SET ****
+
+                      1          2          3          4          5
+                   -2.4450    -2.4448    -0.1758     0.0151     0.0459
+                     A          A          A          A          A   
+    1  LI 1  S    0.706143  -0.706003  -0.147175  -0.100040   0.000000
+    2  LI 1  S   -0.006556   0.011096   0.107343  -0.018658   0.000000
+    3  LI 1  X    0.000000   0.000000   0.000000   0.000000  -0.025977
+    4  LI 1  Y    0.000000   0.000000   0.000000   0.000000   0.055700
+    5  LI 1  Z    0.002300  -0.005103  -0.105886   0.041017   0.000000
+    6  LI 1  S    0.000221  -0.004357   0.399942  -0.113504   0.000000
+    7  LI 1  X    0.000000   0.000000   0.000000   0.000000  -0.216382
+    8  LI 1  Y    0.000000   0.000000   0.000000   0.000000   0.463962
+    9  LI 1  Z   -0.001990   0.003488   0.019765   0.730447   0.000000
+   10  LI 1 XX    0.005864  -0.006764   0.025067   0.030616   0.000000
+   11  LI 1 YY    0.005864  -0.006764   0.025067   0.030616   0.000000
+   12  LI 1 ZZ    0.006082  -0.005688   0.033713   0.030363   0.000000
+   13  LI 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  LI 1 XZ    0.000000   0.000000   0.000000   0.000000  -0.001563
+   15  LI 1 YZ    0.000000   0.000000   0.000000   0.000000   0.003352
+   16  LI 2  S    0.706143   0.706003  -0.147175   0.100040   0.000000
+   17  LI 2  S   -0.006556  -0.011096   0.107343   0.018658   0.000000
+   18  LI 2  X    0.000000   0.000000   0.000000   0.000000  -0.025977
+   19  LI 2  Y    0.000000   0.000000   0.000000   0.000000   0.055700
+   20  LI 2  Z   -0.002300  -0.005103   0.105886   0.041017   0.000000
+   21  LI 2  S    0.000221   0.004357   0.399942   0.113504   0.000000
+   22  LI 2  X    0.000000   0.000000   0.000000   0.000000  -0.216382
+   23  LI 2  Y    0.000000   0.000000   0.000000   0.000000   0.463962
+   24  LI 2  Z    0.001990   0.003488  -0.019765   0.730447   0.000000
+   25  LI 2 XX    0.005864   0.006764   0.025067  -0.030616   0.000000
+   26  LI 2 YY    0.005864   0.006764   0.025067  -0.030616   0.000000
+   27  LI 2 ZZ    0.006082   0.005688   0.033713  -0.030363   0.000000
+   28  LI 2 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  LI 2 XZ    0.000000   0.000000   0.000000   0.000000   0.001563
+   30  LI 2 YZ    0.000000   0.000000   0.000000   0.000000  -0.003352
+
+                      6          7          8          9         10
+                    0.0459     0.0613     0.0905     0.0905     0.1371
+                     A          A          A          A          A   
+    1  LI 1  S    0.000000   0.001814   0.000000   0.000000   0.147247
+    2  LI 1  S    0.000000  -0.256428   0.000000   0.000000  -0.038811
+    3  LI 1  X   -0.055700   0.000000   0.042530  -0.012310   0.000000
+    4  LI 1  Y   -0.025977   0.000000   0.012310   0.042530   0.000000
+    5  LI 1  Z    0.000000   0.073006   0.000000   0.000000  -0.303157
+    6  LI 1  S    0.000000   0.534655   0.000000   0.000000  -4.209904
+    7  LI 1  X   -0.463962   0.000000  -1.117969   0.323591   0.000000
+    8  LI 1  Y   -0.216382   0.000000  -0.323591  -1.117969   0.000000
+    9  LI 1  Z    0.000000   0.685260   0.000000   0.000000   2.782607
+   10  LI 1 XX    0.000000   0.030841   0.000000   0.000000   0.009493
+   11  LI 1 YY    0.000000   0.030841   0.000000   0.000000   0.009493
+   12  LI 1 ZZ    0.000000   0.031034   0.000000   0.000000  -0.011136
+   13  LI 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  LI 1 XZ   -0.003352   0.000000  -0.008378   0.002425   0.000000
+   15  LI 1 YZ   -0.001563   0.000000  -0.002425  -0.008378   0.000000
+   16  LI 2  S    0.000000   0.001814   0.000000   0.000000  -0.147247
+   17  LI 2  S    0.000000  -0.256428   0.000000   0.000000   0.038811
+   18  LI 2  X   -0.055700   0.000000  -0.042530   0.012310   0.000000
+   19  LI 2  Y   -0.025977   0.000000  -0.012310  -0.042530   0.000000
+   20  LI 2  Z    0.000000  -0.073006   0.000000   0.000000  -0.303157
+   21  LI 2  S    0.000000   0.534655   0.000000   0.000000   4.209904
+   22  LI 2  X   -0.463962   0.000000   1.117969  -0.323591   0.000000
+   23  LI 2  Y   -0.216382   0.000000   0.323591   1.117969   0.000000
+   24  LI 2  Z    0.000000  -0.685260   0.000000   0.000000   2.782607
+   25  LI 2 XX    0.000000   0.030841   0.000000   0.000000  -0.009493
+   26  LI 2 YY    0.000000   0.030841   0.000000   0.000000  -0.009493
+   27  LI 2 ZZ    0.000000   0.031034   0.000000   0.000000   0.011136
+   28  LI 2 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  LI 2 XZ    0.003352   0.000000  -0.008378   0.002425   0.000000
+   30  LI 2 YZ    0.001563   0.000000  -0.002425  -0.008378   0.000000
+
+                     11         12         13
+                    0.1941     0.2112     0.2112
+                     A          A          A   
+    1  LI 1  S   -0.058403   0.000000   0.000000
+    2  LI 1  S   -1.307393   0.000000   0.000000
+    3  LI 1  X    0.000000  -1.084199  -0.208967
+    4  LI 1  Y    0.000000  -0.208967   1.084199
+    5  LI 1  Z    0.797351   0.000000   0.000000
+    6  LI 1  S    0.779117   0.000000   0.000000
+    7  LI 1  X    0.000000   0.842145   0.162314
+    8  LI 1  Y    0.000000   0.162314  -0.842145
+    9  LI 1  Z   -1.078977   0.000000   0.000000
+   10  LI 1 XX    0.130811   0.000000   0.000000
+   11  LI 1 YY    0.130811   0.000000   0.000000
+   12  LI 1 ZZ    0.122626   0.000000   0.000000
+   13  LI 1 XY    0.000000   0.000000   0.000000
+   14  LI 1 XZ    0.000000   0.007339   0.001414
+   15  LI 1 YZ    0.000000   0.001414  -0.007339
+   16  LI 2  S   -0.058403   0.000000   0.000000
+   17  LI 2  S   -1.307393   0.000000   0.000000
+   18  LI 2  X    0.000000  -1.084199  -0.208967
+   19  LI 2  Y    0.000000  -0.208967   1.084199
+   20  LI 2  Z   -0.797351   0.000000   0.000000
+   21  LI 2  S    0.779117   0.000000   0.000000
+   22  LI 2  X    0.000000   0.842145   0.162314
+   23  LI 2  Y    0.000000   0.162314  -0.842145
+   24  LI 2  Z    1.078977   0.000000   0.000000
+   25  LI 2 XX    0.130811   0.000000   0.000000
+   26  LI 2 YY    0.130811   0.000000   0.000000
+   27  LI 2 ZZ    0.122626   0.000000   0.000000
+   28  LI 2 XY    0.000000   0.000000   0.000000
+   29  LI 2 XZ    0.000000  -0.007339  -0.001414
+   30  LI 2 YZ    0.000000  -0.001414   0.007339
+
+     ----------------------------------------------------------------
+     PROPERTY VALUES FOR THE UHF   SELF-CONSISTENT FIELD WAVEFUNCTION
+     ----------------------------------------------------------------
+
+          -----------------
+          ENERGY COMPONENTS
+          -----------------
+
+         WAVEFUNCTION NORMALIZATION =       1.0000000000
+
+                ONE ELECTRON ENERGY =     -22.9967417892
+                TWO ELECTRON ENERGY =       6.4327578090
+           NUCLEAR REPULSION ENERGY =       1.6970589653
+                                      ------------------
+                       TOTAL ENERGY =     -14.8669250149
+
+ ELECTRON-ELECTRON POTENTIAL ENERGY =       6.4327578090
+  NUCLEUS-ELECTRON POTENTIAL ENERGY =     -37.9463813754
+   NUCLEUS-NUCLEUS POTENTIAL ENERGY =       1.6970589653
+                                      ------------------
+             TOTAL POTENTIAL ENERGY =     -29.8165646011
+               TOTAL KINETIC ENERGY =      14.9496395862
+                 VIRIAL RATIO (V/T) =       1.9944671194
+
+  ...... PI ENERGY ANALYSIS ......
+
+ ENERGY ANALYSIS:
+            FOCK ENERGY=    -10.1312269401
+          BARE H ENERGY=    -22.9967417892
+     ELECTRONIC ENERGY =    -16.5639843646
+         KINETIC ENERGY=     14.9496395862
+          N-N REPULSION=      1.6970589653
+           TOTAL ENERGY=    -14.8669253994
+        SIGMA PART(1+2)=    -16.5639843646
+               (K,V1,2)=     14.9496395862    -37.9463813754      6.4327574245
+           PI PART(1+2)=      0.0000000000
+               (K,V1,2)=      0.0000000000      0.0000000000      0.0000000000
+  SIGMA SKELETON, ERROR=    -14.8669253994      0.0000000000
+             MIXED PART= 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00
+ ...... END OF PI ENERGY ANALYSIS ......
+
+          ---------------------------------------
+          MULLIKEN AND LOWDIN POPULATION ANALYSES
+          ---------------------------------------
+
+     ATOMIC MULLIKEN POPULATION IN EACH MOLECULAR ORBITAL
+        ALPHA ORBITALS
+
+                      1          2          3
+
+                  1.000000   1.000000   1.000000
+
+    1             0.500000   0.500000   0.500000
+    2             0.500000   0.500000   0.500000
+
+     ATOMIC MULLIKEN POPULATION IN EACH MOLECULAR ORBITAL
+         BETA ORBITALS
+
+                      1          2          3
+
+                  1.000000   1.000000   1.000000
+
+    1             0.500000   0.500000   0.500000
+    2             0.500000   0.500000   0.500000
+
+     ATOMIC SPIN POPULATION (ALPHA MINUS BETA)
+       ATOM         MULL.POP.                    LOW.POP.
+    1 LI            0.000000                     0.000000
+    2 LI            0.000000                     0.000000
+
+
+          ********* ALL ELECTRONS ********
+
+               ----- POPULATIONS IN EACH AO -----
+                             MULLIKEN      LOWDIN
+              1  LI 1  S      1.99878     1.98719
+              2  LI 1  S      0.16423     0.23370
+              3  LI 1  X      0.00000     0.00000
+              4  LI 1  Y      0.00000     0.00000
+              5  LI 1  Z      0.07545     0.04768
+              6  LI 1  S      0.68409     0.45359
+              7  LI 1  X      0.00000     0.00000
+              8  LI 1  Y      0.00000     0.00000
+              9  LI 1  Z     -0.01638     0.04120
+             10  LI 1 XX      0.02662     0.07273
+             11  LI 1 YY      0.02662     0.07273
+             12  LI 1 ZZ      0.04060     0.09118
+             13  LI 1 XY      0.00000     0.00000
+             14  LI 1 XZ      0.00000     0.00000
+             15  LI 1 YZ      0.00000     0.00000
+             16  LI 2  S      1.99878     1.98719
+             17  LI 2  S      0.16423     0.23370
+             18  LI 2  X      0.00000     0.00000
+             19  LI 2  Y      0.00000     0.00000
+             20  LI 2  Z      0.07545     0.04768
+             21  LI 2  S      0.68409     0.45359
+             22  LI 2  X      0.00000     0.00000
+             23  LI 2  Y      0.00000     0.00000
+             24  LI 2  Z     -0.01638     0.04120
+             25  LI 2 XX      0.02662     0.07273
+             26  LI 2 YY      0.02662     0.07273
+             27  LI 2 ZZ      0.04060     0.09118
+             28  LI 2 XY      0.00000     0.00000
+             29  LI 2 XZ      0.00000     0.00000
+             30  LI 2 YZ      0.00000     0.00000
+
+          ----- MULLIKEN ATOMIC OVERLAP POPULATIONS -----
+          (OFF-DIAGONAL ELEMENTS NEED TO BE MULTIPLIED BY 2)
+
+             1           2
+
+    1    2.6143628
+    2    0.3856372   2.6143628
+
+          TOTAL MULLIKEN AND LOWDIN ATOMIC POPULATIONS
+       ATOM         MULL.POP.    CHARGE          LOW.POP.     CHARGE
+    1 LI            3.000000    0.000000         3.000000   -0.000000
+    2 LI            3.000000   -0.000000         3.000000    0.000000
+
+          -------------------------------
+          BOND ORDER AND VALENCE ANALYSIS     BOND ORDER THRESHOLD=0.050
+          -------------------------------
+
+                   BOND                       BOND                       BOND
+  ATOM PAIR DIST  ORDER      ATOM PAIR DIST  ORDER      ATOM PAIR DIST  ORDER
+    1   2  2.806  1.000
+
+                       TOTAL       BONDED        FREE
+      ATOM            VALENCE     VALENCE     VALENCE
+    1 LI                1.000       1.000      -0.000
+    2 LI                1.000       1.000      -0.000
+
+          -----------------------------------------
+          ATOMIC SPIN DENSITY AT THE NUCLEUS (A.U.)
+          -----------------------------------------
+                            SPIN DENS    ALPHA DENS     BETA DENS
+    1  LI           3.0     0.0000000       6.48207       6.48207
+    2  LI           3.0     0.0000000       6.48207       6.48207
+
+          ---------------------
+          ELECTROSTATIC MOMENTS
+          ---------------------
+
+ POINT   1           X           Y           Z (BOHR)    CHARGE
+                 0.000000    0.000000   -0.000000       -0.00 (A.U.)
+         DX          DY          DZ         /D/  (DEBYE)
+     0.000000    0.000000   -0.000000    0.000000
+ ...... END OF PROPERTY EVALUATION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.1 SECONDS, CPU UTILIZATION IS    98.73%
+  $VIB   
+          IVIB=   0 IATOM=   0 ICOORD=   0 E=      -14.8669250149
+  0.000000000E+00 0.000000000E+00-1.677757673E-05 0.000000000E+00 0.000000000E+00
+  1.677757673E-05
+  0.000000000E+00 0.000000000E+00-1.422251277E-13
+ ......END OF GEOMETRY SEARCH......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.1 SECONDS, CPU UTILIZATION IS    98.73%
+               999592  WORDS OF DYNAMIC MEMORY USED
+ EXECUTION OF GAMESS TERMINATED NORMALLY 19:56:01 20-OCT-2025    
+----- accounting info -----
+Files used on the parent node Macbooks-MacBook-Pro.local were:
+-rw-r--r--  1 macbookpro  staff      241 Oct 20 19:56 /Users/macbookpro/local/gamess/scr/li2_q0m1_uhf_631g_star.F05
+-rw-r--r--  1 macbookpro  staff   360032 Oct 20 19:56 /Users/macbookpro/local/gamess/scr/li2_q0m1_uhf_631g_star.F08
+-rw-r--r--  1 macbookpro  staff  2094080 Oct 20 19:56 /Users/macbookpro/local/gamess/scr/li2_q0m1_uhf_631g_star.F10
+-rw-r--r--  1 macbookpro  staff    69151 Oct 20 19:56 /Users/macbookpro/local/gamess/scr/li2_q0m1_uhf_631g_star.dat
+Mon Oct 20 19:56:01 +07 2025
+0.094u 0.051s 0:00.14 100.0%	0+0k 0+0io 46pf+0w
