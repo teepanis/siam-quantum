@@ -1,0 +1,210 @@
+                                                            
++----------------------------------------------------------+
+|| Siam Quantum 2                                          |
+|| Teepanis Chachiyo <teepanisc@nu.ac.th>                  |
+|| Hathaithip Chachiyo <hathaithip.chachiyo@gmail.com>     |
+||                                                         |
+|| Please cite this work as:                               |
+||                                                         |
+|| Teepanis Chachiyo and Hathaithip Chachiyo, (2025)       |
+|| Siam Quantum 2: An Open-Source C Toolbox for Quantum    |
+|| Modeling and Electronic Structure Development.          |
+||                                                         |
+|| Version:   2.0.0                                        |
+||                                                         |
+|| Supported by                                            |
+||      - Thailand Center of Excellence in Physics,        |
+||        Ministry of Higher Education, Science, Research  |
+||        and Innovation, Thailand                         |
+||      - Department of Physics, Faculty of Science,       |
+||        Naresuan University, Phitsanulok, Thailand       |
+||      - Department of Physics, Faculty of Science,       |
+||        Khon Kaen University, Khon Kaen, Thailand       |
+||                                                         |
+|| Author                                                  |
+|| [] Teepanis Chachiyo                                    |
+||      First prototype RHF                                |
+||      Unrestricted Hartree-Fock     (UHF)                |
+||      Density Functional Theory     (DFT)                |
+||      Moller-Plesset Perturbation   (MP2)                |
+||      Minimum Energy Crossing Point (MECP)               |
+||      Convergence Acceleration                           |
+||      Excited States                                     |
+||      Parallelization                                    |
+||      Geometry Optimization                              |
+||      Integral Memory Storage Scheme                     |
+||      Hessian and Molecular Vibrations                   |
+||      Fast Energy and Gradients Evaluation               |
+||      Chachiyo correlation (uniform electron gas)        |
+|| [] Hathaithip Chachiyo                                  |
+||      Chachiyo correlation (general electron gas)        |
+||      Chachiyo exchange    (general electron gas)        |
+||                                                         |
+|| Contributors                                            |
+|| [] Theerapon Khamla                                     |
+||      First prototype gradient of energy                 |
+||      First prototype geometry optimization              |
+||      Exporting densities for visualization              |
+|| [] Keerati Maneesai  - Boys gamma function              |
+|| [] Nanta Sophonrat   - Electric field                   |
+|| [] Chutchawan Jaisuk - Molecular dynamics               |
+|| [] Aniwat Kesorn     - Dipole moment                    |
+||                                                         |
+|| Acknowledgement                                         |
+|| [] Narong Pootaddouwng                                  |
+|| [] Nawee  Jaroonchokanan                                |
+|| [] Labedev grid: from a C/C++ code by John Burkardt     |
+|| [] Becke grid: adapted from DFTLIBS by Radovan Bast     |
+|| [] DFT functional formulae: from LibXC                  |
+|| [] DFT functional formulae: monologue by Timothy Giesea |
+|| [] Integrating subroutine (first prototype only): from  |
+||    PyQuante written by Richard Muller                   |
+||                                                         |
++----------------------------------------------------------+
+                                                            
+ Copyright (C) 2008-2025 Teepanis Chachiyo and Hathaithip Chachiyo  
+                                                                    
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2, or (at your option) 
+any later version.                                                  
+                                                                    
+                                                                    
+Begin: Oct 20, 2025 - 20:14:17
+
+Current Directory: /Users/macbookpro/sq2_data
+Execution Command: ./sq G2/ch2o_q0m1.xyz 321g.txt -Q=0 -M=1 -SCHECK -UHF 
+                                                             
+                                                             
+*************************************************************
+*****                                                   *****
+*****         SECTION: STRUCTURE SPECIFICATION          *****
+*****                                                   *****
+*************************************************************
+Reading molecule in XYZ file format
+Detected 4 atoms
+-------------------------------------------------------------
+                     Atom Coordinates (Angstroms)            
+     Atom         X              Y             Z             
+-------------------------------------------------------------
+       O        0.000000       0.000000       0.686194
+       C        0.000000       0.000000      -0.534875
+       H        0.000000       0.934433      -1.123040
+       H        0.000000      -0.934433      -1.123039
+-------------------------------------------------------------
+                                                             
+                                                             
+*************************************************************
+*****                                                   *****
+*****         SECTION: BASIS SET REPRESENTATION         *****
+*****                                                   *****
+*************************************************************
+                                                             
+                                                             
+*************************************************************
+*****                                                   *****
+*****         SECTION: SCF CALCULATIONS                 *****
+*****                                                   *****
+*************************************************************
+There are 22 Cartesian-Gaussian contracted basis functions
+There are 36 Primitive GTO functions
+                                                             
+                                                             
+-------------------------------------------------------------
+-----            SOLVING HARTREE-FOCK EQUATION          -----
+-------------------------------------------------------------
+Requested unrestricted molecular orbitals
+There are 8 alpha spin and 8 beta spin electrons
+-------------------------------------------------------------
+                     Atom Coordinates (Angstroms)            
+     Atom         X              Y             Z             
+-------------------------------------------------------------
+       O        0.000000       0.000000       0.686194
+       C        0.000000       0.000000      -0.534875
+       H        0.000000       0.934433      -1.123040
+       H        0.000000      -0.934433      -1.123039
+-------------------------------------------------------------
+Computing 1-electron matrix elements ...
+Use identity matrix as initial density matrix ...
+Processing 2E integrals ...
+Schwarz inequality screening cut-off 1.04166720E-10
+Primitive prefactor cut-off 1.00000000E-15
+Use 4-Point DIIS convergence method
+Drag coefficient 0.250000
+SCFConv 1.00E-06
+SCFMax 80 iterations
+Enter SCF loop ... 
+Iteration  Total Energy [Hartrees]  RMSD Density
+------------------------------------------------
+     1        -127.41389260           8.6782E-02
+     2        -121.24456041           6.3237E-02
+     3        -117.45636399           4.8659E-02
+     4        -115.29256990           3.8776E-02
+     5        -112.83026741           9.2493E-03
+     6        -112.94722478           4.3454E-03
+     7        -113.53352872           4.1765E-03
+     8        -113.23842826           7.6390E-04
+     9        -113.22499279           2.2505E-04
+    10        -113.22049742           1.2319E-04
+    11        -113.21839739           6.0159E-05
+    12        -113.22228187           1.4269E-05
+    13        -113.22052724           7.4091E-06
+    14        -113.22081259           1.4286E-06
+................. switch accuracy ..............
+    15        -113.22085098           6.0747E-07
+    16        -113.22086333           1.2798E-07
+    17        -113.22086709           3.0343E-08
+    18        -113.22086499           6.3726E-09
+    19        -113.22086547           5.4489E-10
+Done SCF Loop Total Energy is        -113.22086547 Hartrees
+
+[Begin] saving checkpoint file to checkpoint.txt
+[Done]  saving checkpoint file to checkpoint.txt
+
+                                                             
+                                                             
+*************************************************************
+*****                                                   *****
+*****         SECTION: POST-SCF CALCULATIONS            *****
+*****                                                   *****
+*************************************************************
+                                                             
+                                                             
+-------------------------------------------------------------
+-----               MULLIKEN POPULATION                 -----
+-------------------------------------------------------------
+       Atom       Mulliken Charge
+   1     O          -0.482123
+   2     C           0.128287
+   3     H           0.176918
+   4     H           0.176918
+       Atom       Mulliken Spin
+   1     O           0.000000
+   2     C           0.000000
+   3     H           0.000000
+   4     H           0.000000
+
+
+-------------------------------------------------------------
+-----          ELECTROSTATIC PROPERTIES (AU)            -----
+-------------------------------------------------------------
+  Atom    Potential                 Electric Field           
+                             X             Y             Z   
+-------------------------------------------------------------
+   1     -22.170861     -0.000000     -0.000000      0.261575
+   2     -14.519513     -0.000000     -0.000000     -0.050053
+   3      -1.053897      0.000000      0.077212     -0.036508
+   4      -1.053897     -0.000000     -0.077212     -0.036508
+-------------------------------------------------------------
+
+
+-------------------------------------------------------------
+-----           ELECTRIC MULTIPOLE MOMENT               -----
+-------------------------------------------------------------
+
+                   Dipole Moment (Debye)                     
+                   ---------------------                     
+   X =       0.0000     Y =       0.0000     Z =      -2.6979
+-------------------------------------------------------------
+
+End: Oct 20, 2025 - 20:14:17

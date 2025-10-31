@@ -1,0 +1,507 @@
+                                                            
++----------------------------------------------------------+
+|| Siam Quantum 2                                          |
+|| Teepanis Chachiyo <teepanisc@nu.ac.th>                  |
+|| Hathaithip Chachiyo <hathaithip.chachiyo@gmail.com>     |
+||                                                         |
+|| Please cite this work as:                               |
+||                                                         |
+|| Teepanis Chachiyo and Hathaithip Chachiyo, (2025)       |
+|| Siam Quantum 2: An Open-Source C Toolbox for Quantum    |
+|| Modeling and Electronic Structure Development.          |
+||                                                         |
+|| Version:   2.0.0                                        |
+||                                                         |
+|| Supported by                                            |
+||      - Thailand Center of Excellence in Physics,        |
+||        Ministry of Higher Education, Science, Research  |
+||        and Innovation, Thailand                         |
+||      - Department of Physics, Faculty of Science,       |
+||        Naresuan University, Phitsanulok, Thailand       |
+||      - Department of Physics, Faculty of Science,       |
+||        Khon Kaen University, Khon Kaen, Thailand       |
+||                                                         |
+|| Author                                                  |
+|| [] Teepanis Chachiyo                                    |
+||      First prototype RHF                                |
+||      Unrestricted Hartree-Fock     (UHF)                |
+||      Density Functional Theory     (DFT)                |
+||      Moller-Plesset Perturbation   (MP2)                |
+||      Minimum Energy Crossing Point (MECP)               |
+||      Convergence Acceleration                           |
+||      Excited States                                     |
+||      Parallelization                                    |
+||      Geometry Optimization                              |
+||      Integral Memory Storage Scheme                     |
+||      Hessian and Molecular Vibrations                   |
+||      Fast Energy and Gradients Evaluation               |
+||      Chachiyo correlation (uniform electron gas)        |
+|| [] Hathaithip Chachiyo                                  |
+||      Chachiyo correlation (general electron gas)        |
+||      Chachiyo exchange    (general electron gas)        |
+||                                                         |
+|| Contributors                                            |
+|| [] Theerapon Khamla                                     |
+||      First prototype gradient of energy                 |
+||      First prototype geometry optimization              |
+||      Exporting densities for visualization              |
+|| [] Keerati Maneesai  - Boys gamma function              |
+|| [] Nanta Sophonrat   - Electric field                   |
+|| [] Chutchawan Jaisuk - Molecular dynamics               |
+|| [] Aniwat Kesorn     - Dipole moment                    |
+||                                                         |
+|| Acknowledgement                                         |
+|| [] Narong Pootaddouwng                                  |
+|| [] Nawee  Jaroonchokanan                                |
+|| [] Labedev grid: from a C/C++ code by John Burkardt     |
+|| [] Becke grid: adapted from DFTLIBS by Radovan Bast     |
+|| [] DFT functional formulae: from LibXC                  |
+|| [] DFT functional formulae: monologue by Timothy Giesea |
+|| [] Integrating subroutine (first prototype only): from  |
+||    PyQuante written by Richard Muller                   |
+||                                                         |
++----------------------------------------------------------+
+                                                            
+ Copyright (C) 2008-2025 Teepanis Chachiyo and Hathaithip Chachiyo  
+                                                                    
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2, or (at your option) 
+any later version.                                                  
+                                                                    
+                                                                    
+Begin: Oct 20, 2025 - 20:14:39
+
+Current Directory: /Users/macbookpro/sq2_data
+Execution Command: ./sq G2/sc_q0m1.xyz 631g_star.txt -Q=0 -M=1 -OPT -GUESS=CHECK -MAXMEM=1024 -SCFCONV=1e-8 
+                                                             
+                                                             
+*************************************************************
+*****                                                   *****
+*****         SECTION: STRUCTURE SPECIFICATION          *****
+*****                                                   *****
+*************************************************************
+Reading molecule in XYZ file format
+Detected 2 atoms
+-------------------------------------------------------------
+                     Atom Coordinates (Angstroms)            
+     Atom         X              Y             Z             
+-------------------------------------------------------------
+       C        0.000000       0.000000      -1.123217
+       S        0.000000       0.000000       0.422793
+-------------------------------------------------------------
+                                                             
+                                                             
+*************************************************************
+*****                                                   *****
+*****         SECTION: BASIS SET REPRESENTATION         *****
+*****                                                   *****
+*************************************************************
+                                                             
+                                                             
+*************************************************************
+*****                                                   *****
+*****         SECTION: GEOMETRY OPTIMIZATION            *****
+*****                                                   *****
+*************************************************************
+There are 34 Cartesian-Gaussian contracted basis functions
+There are 80 Primitive GTO functions
+                                                             
+                                                             
+-------------------------------------------------------------
+-----       GEOMETRY OPTIMIZATION Step     1            -----
+-------------------------------------------------------------
+There are 34 Cartesian-Gaussian contracted basis functions
+There are 80 Primitive GTO functions
+                                                             
+                                                             
+-------------------------------------------------------------
+-----            SOLVING HARTREE-FOCK EQUATION          -----
+-------------------------------------------------------------
+Requested restricted molecular orbitals
+There are 22 electrons in the density matrix
+-------------------------------------------------------------
+                     Atom Coordinates (Angstroms)            
+     Atom         X              Y             Z             
+-------------------------------------------------------------
+       C        0.000000       0.000000      -1.123217
+       S        0.000000       0.000000       0.422793
+-------------------------------------------------------------
+Computing 1-electron matrix elements ...
+Read orbital from checkpoint for initial density matrix ...
+Processing 2E integrals ...
+Schwarz inequality screening cut-off 7.49878644E-13
+Primitive prefactor cut-off 1.00000000E-15
+Use 4-Point DIIS convergence method
+Drag coefficient 0.250000
+SCFConv 1.00E-08
+SCFMax 80 iterations
+Enter SCF loop ... 
+Iteration  Total Energy [Hartrees]  RMSD Density
+------------------------------------------------
+     1        -435.59130012           1.9610E-02
+     2        -435.49480011           1.5211E-02
+     3        -435.42414917           1.1830E-02
+     4        -435.37518575           9.2170E-03
+     5        -435.29817631           1.0895E-04
+     6        -435.30384544           1.0422E-05
+     7        -435.30314540           5.0467E-06
+................. switch accuracy ..............
+     8        -435.30364117           2.1494E-06
+     9        -435.30352998           2.2702E-07
+    10        -435.30352395           2.9845E-08
+    11        -435.30352340           6.9797E-09
+................. switch accuracy ..............
+    12        -435.30352316           1.8073E-09
+    13        -435.30352324           8.6510E-10
+    14        -435.30352322           2.7548E-10
+    15        -435.30352322           2.0457E-11
+Done SCF Loop Total Energy is        -435.30352322 Hartrees
+                                                             
+                                                             
+-------------------------------------------------------------
+-----                 FORCE CALCULATIONS                -----
+-------------------------------------------------------------
+[-----------------------------------------------------------]
+
+-------------------------------------------------------------
+ Center  Atomic                Forces (Hartrees/Bohr)        
+ Number  Number          Fx             Fy             Fz    
+-------------------------------------------------------------
+    1      6        0.000000000    0.000000000    0.031161501
+    2     16       -0.000000000   -0.000000000   -0.031161501
+-------------------------------------------------------------
+Convergence Criterion    Value        Threshold
+  Maximum Force          0.031162     0.000100  NO
+  RMS     Force          0.017991     0.000080  NO
+  Maximum Displacement   0.031162     0.000800  NO
+  RMS     Displacement   0.017991     0.000400  NO
+                                                             
+                                                             
+-------------------------------------------------------------
+-----       GEOMETRY OPTIMIZATION Step     2            -----
+-------------------------------------------------------------
+There are 34 Cartesian-Gaussian contracted basis functions
+There are 80 Primitive GTO functions
+                                                             
+                                                             
+-------------------------------------------------------------
+-----            SOLVING HARTREE-FOCK EQUATION          -----
+-------------------------------------------------------------
+Requested restricted molecular orbitals
+There are 22 electrons in the density matrix
+-------------------------------------------------------------
+                     Atom Coordinates (Angstroms)            
+     Atom         X              Y             Z             
+-------------------------------------------------------------
+       C        0.000000       0.000000      -1.106727
+       S        0.000000       0.000000       0.406303
+-------------------------------------------------------------
+Computing 1-electron matrix elements ...
+Use provided orbitals as initial density matrix ...
+Processing 2E integrals ...
+Schwarz inequality screening cut-off 7.82756235E-13
+Primitive prefactor cut-off 1.00000000E-15
+Use 4-Point DIIS convergence method
+Drag coefficient 0.250000
+SCFConv 1.00E-08
+SCFMax 80 iterations
+Enter SCF loop ... 
+Iteration  Total Energy [Hartrees]  RMSD Density
+------------------------------------------------
+     1        -435.37717097           7.7599E-04
+     2        -435.35674909           6.1120E-04
+     3        -435.34172421           4.8780E-04
+     4        -435.33080988           3.9344E-04
+     5        -435.30440453           1.0333E-05
+     6        -435.30433497           4.4342E-06
+................. switch accuracy ..............
+     7        -435.30429707           1.5158E-06
+     8        -435.30423575           4.6682E-07
+     9        -435.30426838           6.9368E-08
+    10        -435.30426097           1.5362E-08
+    11        -435.30426177           4.3247E-09
+................. switch accuracy ..............
+    12        -435.30426184           1.3841E-09
+    13        -435.30426183           2.8237E-10
+    14        -435.30426184           8.0144E-11
+    15        -435.30426184           2.4697E-11
+Done SCF Loop Total Energy is        -435.30426184 Hartrees
+                                                             
+                                                             
+-------------------------------------------------------------
+-----                 FORCE CALCULATIONS                -----
+-------------------------------------------------------------
+[-----------------------------------------------------------]
+
+-------------------------------------------------------------
+ Center  Atomic                Forces (Hartrees/Bohr)        
+ Number  Number          Fx             Fy             Fz    
+-------------------------------------------------------------
+    1      6        0.000000000    0.000000000   -0.008618125
+    2     16       -0.000000000   -0.000000000    0.008618125
+-------------------------------------------------------------
+Convergence Criterion    Value        Threshold
+  Maximum Force          0.008618     0.000100  NO
+  RMS     Force          0.004976     0.000080  NO
+  Maximum Displacement   0.006751     0.000800  NO
+  RMS     Displacement   0.003898     0.000400  NO
+                                                             
+                                                             
+-------------------------------------------------------------
+-----       GEOMETRY OPTIMIZATION Step     3            -----
+-------------------------------------------------------------
+There are 34 Cartesian-Gaussian contracted basis functions
+There are 80 Primitive GTO functions
+                                                             
+                                                             
+-------------------------------------------------------------
+-----            SOLVING HARTREE-FOCK EQUATION          -----
+-------------------------------------------------------------
+Requested restricted molecular orbitals
+There are 22 electrons in the density matrix
+-------------------------------------------------------------
+                     Atom Coordinates (Angstroms)            
+     Atom         X              Y             Z             
+-------------------------------------------------------------
+       C        0.000000       0.000000      -1.110299
+       S        0.000000       0.000000       0.409875
+-------------------------------------------------------------
+Computing 1-electron matrix elements ...
+Use provided orbitals as initial density matrix ...
+Processing 2E integrals ...
+Schwarz inequality screening cut-off 7.80829137E-13
+Primitive prefactor cut-off 1.00000000E-15
+Use 4-Point DIIS convergence method
+Drag coefficient 0.250000
+SCFConv 1.00E-08
+SCFMax 80 iterations
+Enter SCF loop ... 
+Iteration  Total Energy [Hartrees]  RMSD Density
+------------------------------------------------
+     1        -435.28786958           1.7158E-04
+     2        -435.29248413           1.3487E-04
+     3        -435.29587942           1.0748E-04
+     4        -435.29834481           8.6596E-05
+     5        -435.30427000           2.3373E-06
+     6        -435.30429993           9.6537E-07
+................. switch accuracy ..............
+     7        -435.30430297           3.9046E-07
+     8        -435.30432146           9.1695E-08
+     9        -435.30431427           1.2382E-08
+    10        -435.30431559           3.4938E-09
+    11        -435.30431546           9.6183E-10
+................. switch accuracy ..............
+    12        -435.30431544           3.5717E-10
+    13        -435.30431545           7.8245E-11
+    14        -435.30431544           2.2142E-11
+Done SCF Loop Total Energy is        -435.30431544 Hartrees
+                                                             
+                                                             
+-------------------------------------------------------------
+-----                 FORCE CALCULATIONS                -----
+-------------------------------------------------------------
+[-----------------------------------------------------------]
+
+-------------------------------------------------------------
+ Center  Atomic                Forces (Hartrees/Bohr)        
+ Number  Number          Fx             Fy             Fz    
+-------------------------------------------------------------
+    1      6        0.000000000    0.000000000    0.000598882
+    2     16       -0.000000000   -0.000000000   -0.000598882
+-------------------------------------------------------------
+Convergence Criterion    Value        Threshold
+  Maximum Force          0.000599     0.000100  NO
+  RMS     Force          0.000346     0.000080  NO
+  Maximum Displacement   0.000439     0.000800  YES
+  RMS     Displacement   0.000253     0.000400  YES
+                                                             
+                                                             
+-------------------------------------------------------------
+-----       GEOMETRY OPTIMIZATION Step     4            -----
+-------------------------------------------------------------
+There are 34 Cartesian-Gaussian contracted basis functions
+There are 80 Primitive GTO functions
+                                                             
+                                                             
+-------------------------------------------------------------
+-----            SOLVING HARTREE-FOCK EQUATION          -----
+-------------------------------------------------------------
+Requested restricted molecular orbitals
+There are 22 electrons in the density matrix
+-------------------------------------------------------------
+                     Atom Coordinates (Angstroms)            
+     Atom         X              Y             Z             
+-------------------------------------------------------------
+       C        0.000000       0.000000      -1.110067
+       S        0.000000       0.000000       0.409643
+-------------------------------------------------------------
+Computing 1-electron matrix elements ...
+Use provided orbitals as initial density matrix ...
+Processing 2E integrals ...
+Schwarz inequality screening cut-off 7.81064068E-13
+Primitive prefactor cut-off 1.00000000E-15
+Use 4-Point DIIS convergence method
+Drag coefficient 0.250000
+SCFConv 1.00E-08
+SCFMax 80 iterations
+Enter SCF loop ... 
+Iteration  Total Energy [Hartrees]  RMSD Density
+------------------------------------------------
+     1        -435.30537347           1.1092E-05
+     2        -435.30507711           8.7226E-06
+................. switch accuracy ..............
+     3        -435.30485882           6.9529E-06
+     4        -435.30470028           5.6029E-06
+     5        -435.30431926           2.0050E-07
+     6        -435.30431640           6.5512E-08
+     7        -435.30431639           2.2827E-08
+................. switch accuracy ..............
+     8        -435.30431559           3.4002E-09
+     9        -435.30431593           1.9487E-09
+    10        -435.30431582           3.2273E-10
+    11        -435.30431583           4.1975E-11
+Done SCF Loop Total Energy is        -435.30431583 Hartrees
+                                                             
+                                                             
+-------------------------------------------------------------
+-----                 FORCE CALCULATIONS                -----
+-------------------------------------------------------------
+[-----------------------------------------------------------]
+
+-------------------------------------------------------------
+ Center  Atomic                Forces (Hartrees/Bohr)        
+ Number  Number          Fx             Fy             Fz    
+-------------------------------------------------------------
+    1      6        0.000000000    0.000000000    0.000010454
+    2     16       -0.000000000   -0.000000000   -0.000010454
+-------------------------------------------------------------
+Convergence Criterion    Value        Threshold
+  Maximum Force          0.000010     0.000100  YES
+  RMS     Force          0.000006     0.000080  YES
+  Maximum Displacement   0.000008     0.000800  YES
+  RMS     Displacement   0.000004     0.000400  YES
+                                                             
+                                                             
+-------------------------------------------------------------
+-----                  OPTIMIZED GEOMETRY               -----
+-------------------------------------------------------------
+                                                             
+-------------------------------------------------------------
+                     Atom Coordinates (Angstroms)            
+     Atom         X              Y             Z             
+-------------------------------------------------------------
+       C        0.000000       0.000000      -1.110063
+       S        0.000000       0.000000       0.409639
+-------------------------------------------------------------
+                                                             
+                                                             
+-------------------------------------------------------------
+-----                  DISTANCE MATRIX                  -----
+-------------------------------------------------------------
+                                                             
+                       Output Sequence                       
+             +---------------------------------              
+             |   Atom1   Atom2   Atom3   ...                 
+             +---------------------------------              
+       Atom1 |    1                                          
+       Atom2 |    2       3                                  
+       Atom3 |    4       5       6                          
+         :   |    7       8       9      10                  
+                                                             
+                                                             
+                      Output (Angstroms)                    
+                      ------------------                    
+    0.00000     1.51970     0.00000 
+                                                             
+                                                             
+*************************************************************
+*****                                                   *****
+*****         SECTION: SCF CALCULATIONS                 *****
+*****                                                   *****
+*************************************************************
+There are 34 Cartesian-Gaussian contracted basis functions
+There are 80 Primitive GTO functions
+                                                             
+                                                             
+-------------------------------------------------------------
+-----            SOLVING HARTREE-FOCK EQUATION          -----
+-------------------------------------------------------------
+Requested restricted molecular orbitals
+There are 22 electrons in the density matrix
+-------------------------------------------------------------
+                     Atom Coordinates (Angstroms)            
+     Atom         X              Y             Z             
+-------------------------------------------------------------
+       C        0.000000       0.000000      -1.110063
+       S        0.000000       0.000000       0.409639
+-------------------------------------------------------------
+Computing 1-electron matrix elements ...
+Read orbital from checkpoint for initial density matrix ...
+Processing 2E integrals ...
+Schwarz inequality screening cut-off 7.74073389E-13
+Primitive prefactor cut-off 1.00000000E-15
+Use 4-Point DIIS convergence method
+Drag coefficient 0.250000
+SCFConv 1.00E-08
+SCFMax 80 iterations
+Enter SCF loop ... 
+Iteration  Total Energy [Hartrees]  RMSD Density
+------------------------------------------------
+     1        -436.00015942           1.8834E-02
+     2        -435.78354769           1.4612E-02
+     3        -435.62599160           1.1408E-02
+     4        -435.51526807           8.9408E-03
+     5        -435.30059002           1.4891E-04
+     6        -435.30403817           2.6508E-05
+     7        -435.30354280           9.3740E-06
+................. switch accuracy ..............
+     8        -435.30452914           3.8655E-06
+     9        -435.30433781           1.3979E-06
+    10        -435.30432930           3.7994E-07
+    11        -435.30431718           1.3808E-07
+    12        -435.30431380           4.4245E-08
+    13        -435.30431648           8.8117E-09
+    14        -435.30431576           1.5904E-09
+................. switch accuracy ..............
+    15        -435.30431586           3.2298E-10
+    16        -435.30431586           1.0166E-10
+Done SCF Loop Total Energy is        -435.30431586 Hartrees
+                                                             
+                                                             
+*************************************************************
+*****                                                   *****
+*****         SECTION: POST-SCF CALCULATIONS            *****
+*****                                                   *****
+*************************************************************
+                                                             
+                                                             
+-------------------------------------------------------------
+-----               MULLIKEN POPULATION                 -----
+-------------------------------------------------------------
+       Atom       Mulliken Charge
+   1     C          -0.031872
+   2     S           0.031872
+
+
+-------------------------------------------------------------
+-----          ELECTROSTATIC PROPERTIES (AU)            -----
+-------------------------------------------------------------
+  Atom    Potential                 Electric Field           
+                             X             Y             Z   
+-------------------------------------------------------------
+   1     -14.648120      0.000000      0.000000     -0.067430
+   2     -59.170673      0.000000      0.000000     -0.003055
+-------------------------------------------------------------
+
+
+-------------------------------------------------------------
+-----           ELECTRIC MULTIPOLE MOMENT               -----
+-------------------------------------------------------------
+
+                   Dipole Moment (Debye)                     
+                   ---------------------                     
+   X =       0.0000     Y =       0.0000     Z =       1.3400
+-------------------------------------------------------------
+
+End: Oct 20, 2025 - 20:14:40
