@@ -59,7 +59,7 @@ Here, `w[i]` is the weight of the quadrature numerical integration scheme. Using
 
 $$E^\text{DFT}_{xc}[\rho] = \int d^3 r \, E_{xc}(\vec{r}) = \sum_{i} w[i] E_{xc}[i]$$
 
-For hybrid-functional, the situation is a little more complicated. We need to know the perent mixture and then add to two above contributions accordingly.
+For hybrid-functional, the situation is a little more complicated. We need to know the percent mixture and then add to two above contributions accordingly.
 
 ```c
         case METHOD_LIBXC:
@@ -105,7 +105,7 @@ $$
 \end{align*}
 $$
 
-The ability to allow unparied spin configuration is sometimes called ___spin-polarized density functional theory___, supposed to the closed-shell system.
+The ability to allow unparied spin configuration is sometimes called ___spin-polarized density functional theory___, as supposed to the closed-shell system.
 
 Generally, if the number of basis function is `nBasis`, then there are also `nBasis` of these eigenvalues and eigenvectors.
 
@@ -120,7 +120,7 @@ $$
 \end{align*}
 $$
 
-Note that only the exchange-correlation potential operators are specific to the spin type. If we expand the molecular orbitals $\phi_k(\vec{r})$ into a linear combination of the basis function, then we will have the generalized eigenvalue problem for each spin type as shown above. The Fock matrix elements are,
+Note that only the exchange–correlation potential operators are specific to the spin type. If we expand the molecular orbitals $\phi_k(\vec{r})$ into a linear combination of the basis function, then we will have the generalized eigenvalue problem for each spin type as shown above. The Fock matrix elements are,
 
 $$
 \begin{align*}
@@ -136,7 +136,7 @@ Understanding the SCF-cycle in this subroutine is perhaps the most important exe
 
 ### Building 1-Electron Matrix Elements
 
-Early in the subroutine, it proceeds to call subroutine inside `matrix.c` to compute matrix elements. For example, these lines of code computes the kinetic energy matrix elements.
+Early in the subroutine, it calls subroutines inside `matrix.c` to compute matrix elements. For example, these lines of code computes the kinetic energy matrix elements.
 
 ```c
         /////////////////////////////////////////////
@@ -165,7 +165,9 @@ $$
 H_{ij} = (\chi_i| -\frac{1}{2}\nabla^2 + \hat{v}_\text{ext} | \chi_j) = \int d^3 r \chi_i(\vec{r}) [-\frac{1}{2}\nabla^2 + \hat{v}_\text{ext}]\chi_j(\vec{r})
 $$
 
-Sometimes, we call this the 1-electron matrix element because the integral is indeed a function of only 1-electron position. 
+Sometimes, we call this the 1-electron matrix element are integrated over the positions of only 1 electron.
+
+
 
 
 
