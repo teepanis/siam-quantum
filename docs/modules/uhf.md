@@ -1,7 +1,7 @@
 # uhf.h and uhf.c
 
 
-## subroutine **uhf_getEtotal**
+## subroutine **uhf_getEtotal(...)**
 
 This is an important subroutine in the module which supports HF and DFT calculations.
 
@@ -36,7 +36,7 @@ $E_{NN}$ is the nuclei repulsion energy. In atomic unit, it is:
 
 $$E_{NN} = \sum_{A>B} \frac{Z_A Z_B}{|\vec{r}_A - \vec{r}_B|}$$
 
-$E_{xc}$ is the exchange-correlation energy, and is computed differently depending on the models. For example, for pure Hartree-Fock exchange,
+$E_{xc}$ is the exchange-correlation energy, and is computed differently depending on the models. For example, for pure Hartree–Fock exchange,
 
 ```c
                 for(i=0; i < nBasis; i++)
@@ -76,7 +76,7 @@ For hybrid-functional, the situation is a little more complicated. We need to kn
 
 Here, the mixture goes by the variable `opt->hyb_hf_coef` which is loaded early when Siam Quantum started, and stored in `opt`, the option data structure.
 
-## subroutine **uhf**
+## subroutine **uhf(...)**
 
 This is the main subroutine for the SCF cycle. It supports both Hartree-Fock and DFT, since both have the same mathematical structure, the only different being the exchange-corelationtion contribution.
 
@@ -165,7 +165,83 @@ $$
 H_{ij} = (\chi_i| -\frac{1}{2}\nabla^2 + \hat{v}_\text{ext} | \chi_j) = \int d^3 r \chi_i(\vec{r}) [-\frac{1}{2}\nabla^2 + \hat{v}_\text{ext}]\chi_j(\vec{r})
 $$
 
-Sometimes, we call this the 1-electron matrix element are integrated over the positions of only 1 electron.
+Sometimes, we call this the 1-electron matrix element because the integrations are over the position of only 1 electron.
+
+
+### Building Initial Guess Density Matrix $P_{ij}$
+
+By default, presumably with very small basis set like STO-3G or 3-21G, Siam Quantum uses identity matrix as the initial guess.
+
+$$
+P_{ij} = \delta_{ij}
+$$
+
+This should work well when the basis set is minimal and thus all orbitals are occupied. However, for larger basis set, it is always a good idea to incrementally step-up the size of basis, using the smaller as the initial guess for the larger. In this method, Siam Quantum can be configured to load the orbital from the checkpoint file via `-SCFGUESS=CHECK` option. When this option is selected, it does the following:
+
+$$
+P_{ij} = \sum_{k \in \text{occ}} C_{ki} C_{kj}
+$$
+
+Here, the molecular coefficient needs to be normalized with respect to the overlap matrix $S_{ij}$
+
+$$
+\sum_{ij} C_{ki}S_{ij}C_{kj} = 1
+$$
+
+This normalization condition follows directly from the orthogonal property of molecular orbital. Please see the subroutine **normalizeC(...)** in `uhf.c` for details.
+
+However, for calculations that strictly use the same basis functions—meaning the set of contracted Gaussian exponents and weights are identical, but the atomic centers are marginally shifted—the density matrix $P_{ij}$ can be loaded directly from file  with the option `-LDMATRIX`.
+
+### Preparing Integration Screening and Grid 
+
+Particularly, the the 2-electron integral where the summation contain 4 indices. If no screening is used, the computation would take a long time to finish, on the order of $N^4$ where $N$ is the number of basis functions.
+
+Early version of Siam Quantum still contains this primitive version of 2-e integral for comparison and educational purpose. Please see the subroutine **GTO_2JK_Matrix_NoSymm(...)** in `matrix.c` for details.
+
+Modern version of Siam Quantum uses a combination of Schwarz inquality screening of the 2-e integrals and monopole approximation. These typically reduce the complexity down to $N^3$ or $N^2$. The default value for the Schwarz cut-off is $10^{-10}$ and the primitive cut-off is $10^{-15}$.
+
+The primitive cut-off means that if the product of the two paring basis functions has a pre-factor smaller than the threshold, the integral is ignored completely. The situation often occurs when the two basis functions come from difference nuclei that are sufficiently far apart, such that the pre-factor decay exponentially as a function the separating distance.
+
+For DFT calculations, the integrals over the exchange–correlation potential $\hat{v}_{xc}$ can be be done analytically. As such, the molecular grid needs to be prepared as well. Please see the subroutine **genMolGrid(...)** in `grid.c` for details.
+
+
+
+### SCF-Cycle
+
+```c
+        do{
+                iter++;
+
+                // compute delta J,KA,KB matrix
+                ...
+
+                // build fock matrix
+                ...
+
+                // solve generalized eigen value problem and normalize orbital
+                gen_sym_SomeEigen(nBasis, nEA, FA, S, eA, CA);
+                gen_sym_SomeEigen(nBasis, nEB, FB, S, eB, CB);
+                normalizeC(nBasis, nEA, S, CA);
+                normalizeC(nBasis, nEB, S, CB);
+
+                // get new P matrix
+                uhf_getDMatrix(nBasis, nEA, CA, PA);
+                uhf_getDMatrix(nBasis, nEB, CB, PB);
+
+                // compute energy and energ difference
+                dE     = Etot;
+                Etot   = uhf_getEtotal(nBasis, mol, opt, PA, PB, H, JT, KA, KB, thisGrid, Exc);
+                dE     = Etot - dE;
+
+                // update P matrix using convergence method
+                ...
+
+        }while(notConverged);
+```
+
+This is the main portion of the code there it solves the eigenvalue problem iteratively until self-consistency is reached. The overall code structure is straightforward. The convergence criteria is a combination of the energy difference `dE` from the previously iteration and the average change of the density matrix `avgdP`. The threshold can be modified via the option `-SCFCONV`.
+
+
 
 
 
