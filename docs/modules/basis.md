@@ -39,7 +39,7 @@ $$
 \int d^3r \, [x^\ell y^m z^n N_k e^{-\alpha_k r^2}]^2 = 1
 $$
 
-## subroutine **genBasis**
+## subroutine **genBasis(...)**
 
 ```c
 struct GTOBasis_t * genBasis(
@@ -49,9 +49,9 @@ struct GTOBasis_t * genBasis(
         const struct GTOBasisSet_t *basisDB){ // pointer to basis set database
 ```
 
-This is the main subroutine for generating a set of basis functions $\{\chi_i\}$ for a given molecular structure (e.g. XYZ file). The subroutine returns **nBasis** which represents the number of basis functions in the molecular orbitals. ssdsdsads 
+This is the main subroutine for generating a set of basis functions $\{\chi_i\}$ for a given molecular structure (e.g. XYZ file). The subroutine returns **nBasis** which represents the number of basis functions in the molecular orbitals. 
 
-**basisDB** point to the basis set database (e.g. 3-21G, STO-3G). Note that the <em>basis set</em> is a set of angular $\{\ell,m,n\}$ and its contracted radial distribution $\{w_k\}$ with $\{N_k\}$ implied by the definition above, specifically designed for each type of atom. It does not contain the position of the atoms.
+**basisDB** points to the basis set database (e.g. 3-21G, STO-3G). Note that the <em>basis set</em> is a set of angular $\{\ell,m,n\}$ and its contracted radial distribution $\{w_k\}$ with $\{N_k\}$ implied by the definition above, specifically designed for each type of atom. It does not contain the position of the atoms.
 
 **mol** specifies the positions of the atoms in the molecule. 
 
@@ -61,4 +61,17 @@ $$
 \phi_{k}(\vec{r}) = \sum_i {C}_{ki} \chi_i (\vec{r})
 $$
 
-Here, $k$ is the molecular orbital index, and $i$ loops through all the basis functions. $C_{ki}$ is the molecular orbital coefficient matrix. It can be said that solving the electronic structure problem is essentially finding coefficient $C_{ki}$ for which the set of molecular orbital $\{\phi_k\}$ can be properly defined, and the Slater determinant wave-function $\tilde{\Psi}(\vec{r}_1, \vec{r}_2, \cdots)$ subsequently constructed.   
+Here, $k$ is the molecular orbital index, and $i$ loops through all the basis functions. $C_{ki}$ is the molecular orbital coefficient matrix. It can be said that solving the electronic structure problem is essentially finding coefficient $C_{ki}$ for which the set of molecular orbital $\{\phi_k\}$ can be properly defined, and the Slater determinant wave-function $\tilde{\Psi}(\vec{r}_1, \vec{r}_2, \cdots)$ subsequently constructed.
+
+## subroutine **read_GAMESS_BasisSet(...)**
+
+```c
+struct GTOBasisSet_t *read_GAMESS_BasisSet(
+        FILE *inFile,     // input file pointer
+        char *name,       // name to assign
+        int *nBasisSet){  // return also number of basis set read
+```
+
+This is the main subroutine for reading the basis set files distributed along with the program (e.g., `321g.txt` or `sto3g.txt`). The file is assumed to be in GAMESS-US format. It also allocates a memory data structure and returns with its pointer. 
+
+More basis set can simply be downloaded from the Basis Set Exchange database. Only S, P, D, and F angular indices are supported at the moment.
