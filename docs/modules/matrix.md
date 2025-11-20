@@ -69,4 +69,105 @@ K^{(\beta)}_{ij} & = - \sum_{pq}P^{(\beta)}_{pq}(ip|jq)
 \end{align*}
 $$
 
+## subroutine **GTO_overlap(...)**
 
+```c
+double GTO_overlap(int i,                        // ith basis
+                   int j,                        // jth basis
+                   const struct GTOBasis_t *gto);// basis database
+```
+
+There are many subroutines that compute various matrix elements between a pair of basis functions. The overlap, as illustrated here, will be a starting point to understand its general methods and terminology.
+
+```c
+        int iCnt, jCnt;   // contracted function 
+        double sum=0.0;   // integral sum
+
+        // looping over contracted functions
+        for(iCnt=0; iCnt < gto[i].nContract; iCnt++){
+        for(jCnt=0; jCnt < gto[j].nContract; jCnt++){
+                sum = sum + gto[i].coef[iCnt] * gto[j].coef[jCnt] *
+                            gto[i].norm[iCnt] * gto[j].norm[jCnt] *
+                overlap(gto[i].exp[iCnt], gto[i].l,  gto[i].m,  gto[i].n,
+                                          gto[i].x0, gto[i].y0, gto[i].z0,
+                        gto[j].exp[jCnt], gto[j].l,  gto[j].m,  gto[j].n,
+                                          gto[j].x0, gto[j].y0, gto[j].z0);
+        }
+        }
+        return sum;
+```
+
+As seen from the loop above, the subroutine itself does not compute the integral. Instead, subroutines in **overlap(...)** in `int.c` will perform the most basic element of the integration—between two primitive gaussian functions.
+
+In `matrix.c`, the subroutine simply handles the _contraction_ between primitive gaussian. This pattern is used throughout the subroutines in this module.
+
+## subroutine **GTO_JK_Matrix_NoSymm(...)**
+
+```c
+void GTO_JK_Matrix_NoSymm(
+        int nBasis,                    // number of basis functions
+        const double *PA,              // density matrix for spin up
+        const double *PB,              // density matrix for spin down 
+        const struct GTOBasis_t *gto,  // basis set info
+        const double *Schwarz,         // pointer to schwarz matrix
+        double cutoff,                 // cutoff to ignore
+        double *GA,                    // return G for spin up
+        double *GB){                   // return G for spin down
+```
+
+This is the simplest and the slowest version of the 2-electron integral. It only uses Schwarz screening but no other symmetric properties of the integral. Being the simplest, it is also the best place to start looking at how the code works.
+
+```c
+        for(p=0; p < nBasis; p++)
+        for(q=0; q < nBasis; q++)
+        for(i=0; i < nBasis; i++)
+        for(j=0; j < nBasis; j++){
+
+                ...
+
+                // compute two-electron integral
+                EE = contr_eri(...);
+
+                GA[p*nBasis+q] = GA[p*nBasis+q] + PT[i*nBasis+j]*EE;
+                GA[p*nBasis+i] = GA[p*nBasis+i] - PA[q*nBasis+j]*EE;
+
+                GB[p*nBasis+q] = GB[p*nBasis+q] + PT[i*nBasis+j]*EE;
+                GB[p*nBasis+i] = GB[p*nBasis+i] - PB[q*nBasis+j]*EE;
+
+        }
+```
+
+The code above shows the main loop which goes over all 4 indices $(pq|ij)$. If no screening were used, the entire computation would have taken $N^4$ step to complete. Not to mention each `EE` is also very expensive. Notice how the code is calling **contr_eri(...)**, a subroutine also inside `matrix.c`.
+
+## subroutine **contr_eri(...)**
+
+```c
+double contr_eri(
+             int lena,double *aexps,double *acoefs,double *anorms,
+             double xa,double ya,double za,int la,int ma,int na,
+             int lenb,double *bexps,double *bcoefs,double *bnorms,
+             double xb,double yb,double zb,int lb,int mb,int nb,
+             int lenc,double *cexps,double *ccoefs,double *cnorms,
+             double xc,double yc,double zc,int lc,int mc,int nc,
+             int lend,double *dexps,double *dcoefs,double *dnorms,
+             double xd,double yd,double zd,int ld,int md,int nd){
+```
+
+This subroutine works similar to the **GTO_overlap(...)**, except that the arguments are rather straightforward arrays for coefficients and weights. We shall look the the main loop as follows:
+
+```c
+        for (i=0; i<lena; i++)
+        for (j=0; j<lenb; j++)
+        for (k=0; k<lenc; k++)
+        for (l=0; l<lend; l++){
+                // compute element
+                EE  = acoefs[i]*bcoefs[j]*ccoefs[k]*dcoefs[l]
+                      * eri(xa,ya,za,anorms[i],la,ma,na,aexps[i],
+                            xb,yb,zb,bnorms[j],lb,mb,nb,bexps[j],
+                            xc,yc,zc,cnorms[k],lc,mc,nc,cexps[k],
+                            xd,yd,zd,dnorms[l],ld,md,nd,dexps[l]);
+                val += EE;
+        }
+```
+
+Notice how there are 4 indices: `(i,j,k,l)`, making a very computationally intensive task. Again, the subroutine **eri(...)** in `int.c` actually the one that does all the mathematically complicated recursion using the Taketa _et al._ method, as explained in the Siam Quantum paper (legacy version) in details.
