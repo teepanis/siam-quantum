@@ -49,6 +49,7 @@ Let $\widetilde{G}_{n+1}$ be the inverse of the Hessian for the next iteration, 
 $$
 \widetilde{G}_{n+1} = \widetilde{B}\widetilde{G}_n\widetilde{B}^T + \frac{d\vec{R}\,d\vec{R}^T}{\alpha}
 $$
+
 where,
 
 $$
