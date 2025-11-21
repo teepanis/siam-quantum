@@ -84,9 +84,9 @@ At a higher level of computation, electric dipole moment is quite easy to comput
 
 $$
 \begin{aligned}
-p_x & = -\sum_{ij} [ P^{(\alpha)}_{ij}+P^{(\beta)}_{ij})](\chi_i|\hat{x}|\chi_j) + \sum_{A} Z_A x_A \\
-p_y & = -\sum_{ij} [ P^{(\alpha)}_{ij}+P^{(\beta)}_{ij})](\chi_i|\hat{y}|\chi_j) + \sum_{A} Z_A y_A  \\
-p_z & = -\sum_{ij} [ P^{(\alpha)}_{ij}+P^{(\beta)}_{ij})](\chi_i|\hat{z}|\chi_j) + \sum_{A} Z_A z_A 
+p_x & = -\sum_{ij} ( P^{(\alpha)}_{ij}+P^{(\beta)}_{ij})(\chi_i|\hat{x}|\chi_j) + \sum_{A} Z_A x_A \\
+p_y & = -\sum_{ij} (P^{(\alpha)}_{ij}+P^{(\beta)}_{ij})(\chi_i|\hat{y}|\chi_j) + \sum_{A} Z_A y_A  \\
+p_z & = -\sum_{ij} (P^{(\alpha)}_{ij}+P^{(\beta)}_{ij})(\chi_i|\hat{z}|\chi_j) + \sum_{A} Z_A z_A 
 \end{aligned}
 $$
 
