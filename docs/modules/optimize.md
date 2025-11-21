@@ -93,10 +93,10 @@ Let $n$=`nIter` be the index for the current iteration, the algorithm proceeds a
 
 $$
 \begin{aligned}
-& \text{1. With} \; \vec{R}_n \quad \text{compute} \; \vec{g}_n \\
+& \text{1. With } \vec{R}_n \quad \text{compute }\vec{g}_n \\
 & \text{2. Update the inverse Hessian} \\
-& \text{3. Compute the stepping vector} \; d\vec{R} \\
-& \text{4. Update the parameter space} \; \vec{R}_{n+1} = \vec{R}_n + d\vec{R}
+& \text{3. Compute the stepping vector }  d\vec{R} \\
+& \text{4. Update the parameter space }  \vec{R}_{n+1} = \vec{R}_n + d\vec{R}
 \end{aligned}
 $$
 
