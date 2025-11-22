@@ -42,7 +42,7 @@ void invHessian_BFGS(
         double *invHessian){ // original inverse of the Hessian
 ```
 
-This subroutine computes inverse of Hessian matrix using BFBS scheme as explained in the Equation (C.25b) from Szabo & Ostland, _Modern Quantum Chemistry Introduction to Advanced Electronic Structure Theory_.
+This subroutine computes inverse of Hessian matrix using BFGS scheme as explained in the Equation (C.25b) from Szabo & Ostland, _Modern Quantum Chemistry Introduction to Advanced Electronic Structure Theory_.
 
 Let $\widetilde{G}_{n+1}$ be the inverse of the Hessian for the next iteration, then:
 
