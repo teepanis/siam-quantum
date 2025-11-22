@@ -79,7 +79,7 @@ This subroutine prints out formatted Hessian so a simple script can extracted th
 To perform normal mode analysis, first the _mass-weighted_ Hessian is computed as follows:
 
 $$
-\mathcal{H}^{}_{ij} \equiv \frac{1}{\sqrt{m_i m_j}} H_{ij} \quad \times \quad \frac{1}{\sqrt{\footnotesize(\text{AMU2KG})^2}}\frac{\footnotesize\text{HARTREE2J}}{(\footnotesize\text{BOHR2ANGSTROM}\times 10^{-10})^2}
+\mathcal{H}^{}_{ij} \equiv \frac{1}{\sqrt{m_i m_j}} H_{ij} \quad \times \quad \frac{1}{\sqrt{(\text{AMU2KG})^2}}\frac{\text{HARTREE2J}}{(\text{BOHR2ANGSTROM}\times 10^{-10})^2}
 $$
 
 Here, $m_i, m_j$ are the mass of the most abundant isotope of the nuclei corresponding to the coordinate parameter $i, j$ respectively. Care must be taken to handle the unit properly from the typical atomic unit in the code to the SI unit.
@@ -95,13 +95,13 @@ In general, there are as many eigenvalues and eigenvectors as the dimension of t
 The oscillation frequency in $\text{cm}^{-1}$ can be calculated as follows:
 
 $$
-f_n = \frac{1}{2\pi} \sqrt{\lambda_n} \quad \times \quad \footnotesize 10^{-6}\cdot\text{MHZ2CM}
+f_n = \frac{1}{2\pi} \sqrt{\lambda_n} \quad \times \quad 10^{-6}\cdot\text{MHZ2CM}
 $$
 
 Summing all the frequencies would give the _Zero-Point Energy_ in Hartree.
 
 $$
-E_{ZPE} =  \sum_n{ \frac{1}{2} f_n} \quad \times \quad \footnotesize\text{CM2HARTREE}
+E_{ZPE} =  \sum_n{ \frac{1}{2} f_n} \quad \times \quad \text{CM2HARTREE}
 $$
 
 Here, all conversion factors are defined in `hessian.h` as follows:
