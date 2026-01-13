@@ -17,15 +17,18 @@ We tested the walkthrough on Ubuntu 24.04.3 LTS AMD 64-bit distribution, which a
 - We opened VirtualBox application, and click `New` to setup a new virtual machine
 
 - We specified the following information
-> - VM Name: Ubuntu 24.04.3 LTS AMD 64-bit Desktop
-> - VM Folder: C:\Users\Admin\VirtualBox VMs
-> - ISO Image: >> just downloaded
-> - OS: Linux
-> - OS Distribution: Ubuntu
-> - Proceed with Unattended Installation
-> - RAM 4096, CPU 2, Disk Size 25GB
-> - Username: vbox
-> - Password: F=ma
+
+```
+VM Name: Ubuntu 24.04.3 LTS AMD 64-bit Desktop
+VM Folder: C:\Users\Admin\VirtualBox VMs
+ISO Image: >> just downloaded
+OS: Linux
+OS Distribution: Ubuntu
+Proceed with Unattended Installation
+RAM 4096, CPU 2, Disk Size 25GB
+Username: vbox
+Password: F=ma
+```
 
 - Click `Finish`, and the VirtualBox will start Ubuntu installation process. Be sure to click _Install Ubuntu_ afterward. When it finished copying all the files, it restarted the virtual machine automatically.
 
@@ -124,17 +127,17 @@ librefblas.a   xc.h      xc_funcs_removed.h   xc_version.h
 ## Windows MinGW using gcc compiler
 #CC  = gcc
 #CCOPT = -O3 -Wall -DLIBXC -I${INC_PATH} 
-#LDOPT = -O3 -Wall
+#LDOPT = -O3 -Wall -static -lm -lgfortran -lquadmath
 
 ## GNU Linux using gcc compiler
 CC  = gcc
 CCOPT = -O3 -m64 -Wall -msse2 -DLIBXC -I${INC_PATH}
-LDOPT = -O3 -m64 -Wall
+LDOPT = -O3 -m64 -Wall -lm -lgfortran 
 
 ## macOS using homebrew compiler
 #CC = /opt/homebrew/bin/gcc-15
 #CCOPT = -O3 -m64 -Wall -DLIBXC -I${INC_PATH}
-#LDOPT = -O3 -m64 -Wall
+#LDOPT = -O3 -m64 -Wall -lm -lgfortran
 
 ######### END SELECT COMPILER #######
 ```
@@ -159,17 +162,25 @@ We tested the the compilation on Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz 3.00 GH
 - Double click it, and choose `Install`. Select the default directory
 `C:\MinGW`, continue until this initial process is complete.
 - In `MinGW Installation Manager` we are to select packages to install. Focus on the _Basic Setup_ tab, and select all of these:
-> - mingw-developer-toolkit,
-> - mingw32-base
-> - mingw32-gcc-ada
-> - mingw32-gcc-fortran
-> - mingw32-gcc-g++
-> - mingw32-gcc-obj
-> - mysys-base  
+
+```
+mingw-developer-toolkit
+mingw32-base
+mingw32-gcc-ada
+mingw32-gcc-fortran
+mingw32-gcc-g++
+mingw32-gcc-obj
+mysys-base
+```
+
 - Now focus on _All Packages_ tab, search for these entries, and select them.
-> - msys-unzip bin
-> - msys-unzip doc
-> - msys-unzip lic
+
+```
+msys-unzip bin
+msys-unzip doc
+msys-unzip lic
+```
+
 - On the upper menu, choose Installation >> Apply Changes
 - Open a terminal for the MinGW environment by browsing your file system through `C:\MinGW\msys\1.0`. You will find `msys.bat` here. Double click it.
 - A shell terminal with the prompt `$` appears. To understand its file system we can execute:
@@ -267,17 +278,17 @@ librefblas.a   xc.h      xc_funcs_removed.h   xc_version.h
 ## Windows MinGW using gcc compiler
 CC  = gcc
 CCOPT = -O3 -Wall -DLIBXC -I${INC_PATH} 
-LDOPT = -O3 -Wall
+LDOPT = -O3 -Wall -static -lm -lgfortran -lquadmath
 
 ## GNU Linux using gcc compiler
 #CC  = gcc
 #CCOPT = -O3 -m64 -Wall -msse2 -DLIBXC -I${INC_PATH}
-#LDOPT = -O3 -m64 -Wall
+#LDOPT = -O3 -m64 -Wall -lm -lgfortran 
 
 ## macOS using homebrew compiler
 #CC = /opt/homebrew/bin/gcc-15
 #CCOPT = -O3 -m64 -Wall -DLIBXC -I${INC_PATH}
-#LDOPT = -O3 -m64 -Wall
+#LDOPT = -O3 -m64 -Wall -lm -lgfortran
 
 ######### END SELECT COMPILER #######
 ```
@@ -421,19 +432,20 @@ librefblas.a   xc.h      xc_funcs_removed.h   xc_version.h
 ```Makefile
 ####### BEGIN SELECT COMPILER #######
 
-#CC  = icc
-#CCOPT = -O3 -funroll-loops -fno-alias -m64 -Wall
-#LDOPT = -O3 -m64 -Wall
+## Windows MinGW using gcc compiler
+#CC  = gcc
+#CCOPT = -O3 -Wall -DLIBXC -I${INC_PATH} 
+#LDOPT = -O3 -Wall -static -lm -lgfortran -lquadmath
 
 ## GNU Linux using gcc compiler
 #CC  = gcc
 #CCOPT = -O3 -m64 -Wall -msse2 -DLIBXC -I${INC_PATH}
-#LDOPT = -O3 -m64 -Wall
+#LDOPT = -O3 -m64 -Wall -lm -lgfortran 
 
 ## macOS using homebrew compiler
 CC = /opt/homebrew/bin/gcc-15
 CCOPT = -O3 -m64 -Wall -DLIBXC -I${INC_PATH}
-LDOPT = -O3 -m64 -Wall
+LDOPT = -O3 -m64 -Wall -lm -lgfortran
 
 ######### END SELECT COMPILER #######
 ```
